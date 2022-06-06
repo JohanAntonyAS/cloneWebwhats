@@ -1,0 +1,1036 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+* {
+    --colorChat: #d9fdd3;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid #f66; */
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    border-bottom: none;
+}
+
+p,
+span,
+textarea {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+textarea {
+    resize: none;
+}
+
+body {
+    user-select: none;
+}
+
+img {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+::-webkit-scrollbar {
+    width: 6px !important;
+    height: 6px !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #DEDFDD;
+}
+
+.wrapper::before {
+    content: '';
+    position: absolute;
+    background-color: #11A984;
+    width: 100%;
+    height: 125px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.boxWsp {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 38px);
+    max-width: 1600px;
+    height: calc(100% - 38px);
+    background: #fff;
+    transition: 0.3s;
+}
+
+.BoxContacts {
+    position: relative;
+    display: flex;
+    flex: 25 0 0;
+    min-width: 330px;
+    max-width: 400px;
+    height: 100%;
+    flex-direction: column;
+}
+
+.panelHeader {
+    position: relative;
+    background-color: #F0F2F5;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px 10px 18px;
+    border-right: 1px solid rgba(59, 74, 84, 0.3);
+}
+
+.ContentUser {
+    position: relative;
+    width: 65%;
+    cursor: pointer;
+}
+
+.iUser,
+.iStatus a,
+.iChat a,
+.iMenu a {
+    display: flex;
+}
+
+.iUser img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    border-radius: 30px;
+}
+
+.iStatus a:active,
+.iChat a:active,
+.iMenu a:active {
+    position: relative;
+    background-color: #D9DBDF;
+    border-radius: 50px;
+}
+
+.iStatus,
+.iChat,
+.iMenu {
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.iStatus a,
+.iChat a,
+.iMenu a {
+    padding: 7px;
+    color: #54656E;
+}
+
+.panelHeader .ContentOptionsHeader {
+    position: relative;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panelHeader .ContentOptionsHeader ul {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.panelHeader .ContentOptionsHeader ul li {
+    display: flex;
+}
+
+.tabIndex {
+    height: auto;
+    overflow: hidden;
+}
+
+.searchBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #F0F2F5;
+}
+
+.searchInput {
+    position: relative;
+    margin: 6px 0px 6px 0px;
+    width: 90%;
+    border: none;
+    background-color: #F0F2F5;
+    padding: 8px 8px 8px 60px;
+    font-size: 14px;
+    outline: 0;
+    border-radius: 7px;
+}
+
+.searchInput::before {}
+
+.chatList {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+.contact {
+    display: flex;
+    height: 72px;
+    cursor: pointer;
+}
+
+.contact:hover {
+    background-color: #F0F2F5;
+}
+
+.activeContact {
+    background-color: #F0F2F5;
+}
+
+.pictureContact {
+    display: flex;
+    align-items: center;
+}
+
+.pictureContent {
+    width: 49px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: 0px 10px 0px 12px;
+}
+
+.pictureContent img {
+    width: 100%;
+}
+
+.resumeContact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: auto;
+    flex-grow: 1;
+    min-width: 0;
+    padding-right: 12px;
+    border-bottom: 1px solid #F0F2F5;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.textOverflow {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.nameContact {
+    font-size: 17px;
+    max-width: 220px;
+    font-weight: bold;
+    color: black;
+    margin-right: 18px;
+}
+
+.resumeContact p:last-child {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.808);
+}
+
+.containerText {
+    display: contents;
+}
+
+.contactHour {
+    font-size: 12px;
+    text-align: right;
+    margin: 0 4px;
+}
+
+.resumeChat {
+    max-width: 275px;
+}
+
+.flex p~a {
+    display: none;
+}
+
+.BoxChat {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 597px;
+    flex: 45;
+    background-color: blue;
+    user-select: text;
+}
+
+.headerChat {
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+    flex-grow: 1;
+    max-height: 60px;
+}
+
+.contactActive {
+    display: flex;
+    height: 60px;
+    flex-grow: 8;
+}
+
+.contactActiveImg {
+    display: flex;
+    align-items: center;
+}
+
+.contactActiveContent {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: 0px 10px 0px 12px;
+}
+
+.contactActiveContent img {
+    width: 100%;
+    height: 100%;
+}
+
+.detailsChat {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* flex-basis: auto;
+    flex-grow: 1;
+    min-width: 0; */
+    padding-right: 12px;
+}
+
+.detailsChat .limitText {
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+.detailsChat .one {
+    font-size: 16px;
+}
+
+.detailsChat .two {
+    font-size: 13px;
+}
+
+.headerChatIcons {
+    display: flex;
+    width: 10%;
+    height: 60px;
+    align-items: center;
+    flex-grow: 2;
+    justify-content: space-between;
+}
+
+.headerChatContent {
+    position: relative;
+}
+
+.headerChatContent a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #54656E;
+    padding: 7px;
+}
+
+.headerChatContent a:active {
+    background-color: #D9DBDF;
+    border-radius: 50px;
+}
+
+.listaChat {
+    position: absolute;
+    left: -38px;
+    bottom: -124px;
+}
+
+.mainChat {
+    position: relative;
+    display: flex;
+    flex-grow: 8;
+    background-color: #EFEAE3;
+    user-select: text;
+}
+
+.mainChat::after {
+    content: '';
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url('../resources/img/bg-chat.png');
+    opacity: 0.4;
+}
+
+.textChat {
+    display: flex;
+    position: relative;
+    max-height: 62px;
+    flex-grow: 1;
+    background-color: #F0F2F5;
+}
+
+.tcArea {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contentTc {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+}
+
+.tcEmojiFile {
+    flex-grow: 1;
+    max-width: 94px;
+}
+
+.tcBoxText {
+    flex-grow: 9;
+}
+
+.contIcontc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 7px;
+    color: #54656D;
+}
+
+.contIcontc:active {
+    background-color: #D9DBDF;
+    border-radius: 50px;
+}
+
+.tcGrowOne {
+    display: flex;
+    flex-grow: 9;
+    align-items: center;
+}
+
+.tcTextcont {
+    padding: 5px 8px;
+    width: 98%;
+    height: 46px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.tcText {
+    font-size: 15px;
+    font-weight: 400;
+    width: 100%;
+    height: 37px;
+    border: none;
+    line-height: 1.2;
+    outline: none;
+}
+
+.tcGrowTwo {
+    display: flex;
+    flex-grow: 1;
+    max-width: 50px;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contArrowSend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0F2F5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.arrowSend {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #54656D;
+}
+
+.arrowSend:active {
+    color: #0CA886;
+}
+
+.boxInfo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 30;
+    min-width: 398px;
+    max-width: 480px;
+    height: 100%;
+    background-color: rgb(240, 242, 245);
+    user-select: text;
+    overflow: hidden;
+}
+
+.headerInfo {
+    border: none;
+    padding: 20px 0;
+    flex-grow: 1;
+}
+
+.iconInfo {
+    display: flex;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.centerIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.titleInfo {
+    display: flex;
+    flex-grow: 9;
+    height: 100%;
+    user-select: none;
+}
+
+.centerTextI {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.descripcionInfo {
+    flex-grow: 9;
+    overflow-y: scroll;
+}
+
+.descripcionInfo,
+.contentInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.contentInfo {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.infoSection {
+    --shadow-color: 0deg 0% 0%;
+    position: relative;
+    background-color: #ffffff;
+    padding: 23px 30px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 1.5px hsl(var(--shadow-color) / 0),
+        0px 3.4px 5.1px hsl(var(--shadow-color) / 0.11);
+}
+
+.infoSection:last-child {
+    margin-bottom: 0;
+}
+
+.ISPContProfileData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ISPImg {
+    display: flex;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #54656eef;
+}
+
+.ISPContProfileData img {
+    height: 100%;
+    width: 100%;
+}
+
+.ISPdataImg {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    opacity: 0;
+}
+
+.ISPIcon {
+    color: #fff;
+}
+
+.ISPContProfileData:hover>.ISPdataImg:hover {
+    background-color: #54656ecb;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+.ISPText {
+    color: #fff;
+    width: 100px;
+    margin-top: 4px;
+}
+
+.ISPText p {
+    font-weight: 500;
+    font-size: 12px;
+    overflow-wrap: break-word;
+    white-space: wrap;
+    text-align: center;
+    user-select: none;
+}
+
+.ISPMenu {
+    /* display: none; */
+    position: absolute;
+}
+
+.ISPName {
+    position: relative;
+}
+
+.ISPNcontTxt {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ISPNtext {
+    position: relative;
+    margin-top: 14px;
+    margin-right: 12px;
+}
+
+.ISPNtext input {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    padding: 4px 10px;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+.ISPNcontBtn {
+    position: absolute;
+    display: flex;
+    margin-top: 14px;
+    display: none;
+    border-bottom: none !important;
+}
+
+.ISPNbtn {
+    border: none;
+    background-color: transparent;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.ISPNicon {
+    color: #86969F;
+}
+
+.ISPNcontBtn .ISPNicon:active {
+    color: #0CA886;
+}
+
+.ISPNcontTxt:hover>.ISPNcontBtn,
+.ISPNcontTxt:hover>.ISPNtext input:focus,
+.ISPNtext input:focus {
+    display: block;
+    right: 80px;
+    border-bottom: 2px solid #0CA886;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.ISPNcontTxt:hover>.ISPNtext input {
+    background-color: #F0F2F5;
+    border-radius: 8px;
+}
+
+.ISPDetails {
+    display: flex;
+    margin-top: 4px;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.ISPDcont {
+    position: relative;
+}
+
+.ISPDbtn {
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.ISDcont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.ISDcontDescript {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.ISDcontDescript textarea {
+    overflow-y: scroll;
+    width: 100%;
+    outline: 0;
+    border: none;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.ISDcontDescript textarea::placeholder {
+    color: #0CA886;
+    font-size: 14px;
+}
+
+.ISDcontDescript textarea:focus {
+    border-bottom: 2px solid #0CA886;
+}
+
+.ISDbtn {
+    position: absolute;
+    right: 0;
+}
+
+.ISDcreate {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.ISDcreateText {
+    font-size: 14px;
+    color: #86969F;
+}
+
+.ISFcont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ISFcont p {
+    display: flex;
+    color: #86969F;
+    font-size: 14px;
+}
+
+.ISFicon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #86969F;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.ISFicon span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #86969F;
+    font-size: 14px;
+}
+
+.ISFcont span:first-child {
+    margin-right: 5px;
+}
+
+.ISMembers {
+    padding: 23px 0;
+}
+
+.ISMcontentData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ISMtitle {
+    width: 100%;
+    padding: 10px 30px;
+}
+
+.ISMtitle p {
+    font-size: 15px;
+    color: #86969F;
+}
+
+.ISMcard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ISMaddMember {
+    display: flex;
+    height: 68px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ISMcontIcon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.ISMicon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #0CA886;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.ISMtext {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.ISMmember {
+    display: flex;
+    flex-direction: row;
+    height: 68px;
+    width: 100%;
+    padding: 0 30px;
+}
+
+
+.ISMmember:hover {
+    background-color: #f5f6f6;
+}
+
+.ISMcontPicture {
+    display: flex;
+    flex-grow: 1;
+}
+
+.ISMpictureBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ISMimg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.ISMimg img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ISMiconAlt {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.ISMdata {
+    display: flex;
+    flex-grow: 9;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ISMcontData {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.ISMdataMember {
+    display: flex;
+    flex-direction: row;
+}
+
+.ISMdataMember:first-child {
+    margin-bottom: 5px;
+}
+
+.ISMdataMember p {
+    font-size: 16px;
+}
+
+.ISMdataMember:nth-child(2) p {
+    color: #86969f;
+    font-size: 14px;
+}
+
+.tag {
+    border-radius: 5px;
+    font-size: 11px;
+    padding: 2px 5px;
+}
+
+.tagGreen {
+    background-color: #e7fce4;
+    color: #1e874c;
+}
+
+.tagGrey {
+    background-color: #e9e9e9e7;
+    color: #5a5a5a;
+}
+
+.tagYellow {
+    background-color: #fff3cd;
+    color: #bd9a00;
+}
+
+.ISMdataMember:nth-child(2) span {
+    font-size: 12px;
+    color: #86969f;
+}
+
+.ISTrash {
+    padding: 23px 0;
+}
+
+.ISTContBtn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ISTcontentCards {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.ISTcard {
+    height: 58px;
+    display: flex;
+}
+
+.ISTcard:hover {
+    background-color: #f5f6f6;
+}
+
+.ISTcard:first-child {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.ISTcard:nth-child(2) {
+    display: flex;
+    align-items: center;
+    flex-grow: 9;
+}

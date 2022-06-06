@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Web Clone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+</head>
+
+<body>
+    <main>
+        <div class="wrapper">
+            <div class="container">
+
+                <div class="boxWsp">
+                    <div class="BoxProfile"></div>
+                    <div class="BoxContacts">
+
+                        <header class="panelHeader">
+                            <div class="ContentUser">
+                                <figure class="iUser">
+                                    <svg viewBox="0 0 212 212" width="40" height="40" class="">
+                                        <path fill="#DFE5E7" class="background"
+                                            d="M106.251.5C164.653.5 212 47.846 212 106.25S164.653 212 106.25 212C47.846 212 .5 164.654.5 106.25S47.846.5 106.251.5z">
+                                        </path>
+                                        <g fill="#FFF">
+                                            <path class="primary"
+                                                d="M173.561 171.615a62.767 62.767 0 0 0-2.065-2.955 67.7 67.7 0 0 0-2.608-3.299 70.112 70.112 0 0 0-3.184-3.527 71.097 71.097 0 0 0-5.924-5.47 72.458 72.458 0 0 0-10.204-7.026 75.2 75.2 0 0 0-5.98-3.055c-.062-.028-.118-.059-.18-.087-9.792-4.44-22.106-7.529-37.416-7.529s-27.624 3.089-37.416 7.529c-.338.153-.653.318-.985.474a75.37 75.37 0 0 0-6.229 3.298 72.589 72.589 0 0 0-9.15 6.395 71.243 71.243 0 0 0-5.924 5.47 70.064 70.064 0 0 0-3.184 3.527 67.142 67.142 0 0 0-2.609 3.299 63.292 63.292 0 0 0-2.065 2.955 56.33 56.33 0 0 0-1.447 2.324c-.033.056-.073.119-.104.174a47.92 47.92 0 0 0-1.07 1.926c-.559 1.068-.818 1.678-.818 1.678v.398c18.285 17.927 43.322 28.985 70.945 28.985 27.678 0 52.761-11.103 71.055-29.095v-.289s-.619-1.45-1.992-3.778a58.346 58.346 0 0 0-1.446-2.322zM106.002 125.5c2.645 0 5.212-.253 7.68-.737a38.272 38.272 0 0 0 3.624-.896 37.124 37.124 0 0 0 5.12-1.958 36.307 36.307 0 0 0 6.15-3.67 35.923 35.923 0 0 0 9.489-10.48 36.558 36.558 0 0 0 2.422-4.84 37.051 37.051 0 0 0 1.716-5.25c.299-1.208.542-2.443.725-3.701.275-1.887.417-3.827.417-5.811s-.142-3.925-.417-5.811a38.734 38.734 0 0 0-1.215-5.494 36.68 36.68 0 0 0-3.648-8.298 35.923 35.923 0 0 0-9.489-10.48 36.347 36.347 0 0 0-6.15-3.67 37.124 37.124 0 0 0-5.12-1.958 37.67 37.67 0 0 0-3.624-.896 39.875 39.875 0 0 0-7.68-.737c-21.162 0-37.345 16.183-37.345 37.345 0 21.159 16.183 37.342 37.345 37.342z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <!-- <img src="resources/img/users/bob.jpg" alt=""> -->
+                                </figure>
+                            </div>
+                            <div class="ContentOptionsHeader">
+                                <ul>
+                                    <li class="iStatus">
+                                        <a href="#">
+                                            <svg version="1.1" id="ee51d023-7db6-4950-baf7-c34874b80976" x="0" y="0"
+                                                viewBox="0 0 24 24" width="24" height="24" class="">
+                                                <path fill="currentColor"
+                                                    d="M12 20.664a9.163 9.163 0 0 1-6.521-2.702.977.977 0 0 1 1.381-1.381 7.269 7.269 0 0 0 10.024.244.977.977 0 0 1 1.313 1.445A9.192 9.192 0 0 1 12 20.664zm7.965-6.112a.977.977 0 0 1-.944-1.229 7.26 7.26 0 0 0-4.8-8.804.977.977 0 0 1 .594-1.86 9.212 9.212 0 0 1 6.092 11.169.976.976 0 0 1-.942.724zm-16.025-.39a.977.977 0 0 1-.953-.769 9.21 9.21 0 0 1 6.626-10.86.975.975 0 1 1 .52 1.882l-.015.004a7.259 7.259 0 0 0-5.223 8.558.978.978 0 0 1-.955 1.185z">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="iChat">
+                                        <a href="#">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                                <path fill="currentColor"
+                                                    d="M19.005 3.175H4.674C3.642 3.175 3 3.789 3 4.821V21.02l3.544-3.514h12.461c1.033 0 2.064-1.06 2.064-2.093V4.821c-.001-1.032-1.032-1.646-2.064-1.646zm-4.989 9.869H7.041V11.1h6.975v1.944zm3-4H7.041V7.1h9.975v1.944z">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="iMenu">
+                                        <a href="#">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                                <path fill="currentColor"
+                                                    d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </header>
+                        <span class="divide"></span>
+                        <div class="searchBox">
+                            <input class="searchInput" placeholder="Busca un chat o inicia uno nuevo" type="text">
+                        </div>
+                        <div class="tabIndex">
+
+                            <div class="chatList">
+                                <div class="contact activeContact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
+                                                    asdasd sad</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> test test test test
+                                                tesasdasdasdstasdasdsadasdasdasdasd
+                                                testtest test test test</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="BoxChat">
+                        <div class="panelHeader headerChat">
+                            <div class="contactActive">
+                                <div class="contactActiveImg">
+                                    <div class="contactActiveContent">
+                                        <img src="resources/img/users/bob.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="detailsChat">
+                                    <div class="flex">
+                                        <p class="textOverflow limitText one">Kevin sad asasdasdasdasdsadasdda asdasd
+                                            sad</p>
+                                    </div>
+                                    <div class="flex">
+                                        <p class="textOverflow limitText two"> test test test test
+                                            tesasdasdasdstasdasdsadasdasdasdasd
+                                            testtest test test test</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="headerChatIcons">
+                                <div class="headerChatContent">
+                                    <a href="#">
+                                        <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                            <path fill="currentColor"
+                                                d="M15.009 13.805h-.636l-.22-.219a5.184 5.184 0 0 0 1.256-3.386 5.207 5.207 0 1 0-5.207 5.208 5.183 5.183 0 0 0 3.385-1.255l.221.22v.635l4.004 3.999 1.194-1.195-3.997-4.007zm-4.808 0a3.605 3.605 0 1 1 0-7.21 3.605 3.605 0 0 1 0 7.21z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="headerChatContent">
+                                    <a href="#">
+                                        <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                            <path fill="currentColor"
+                                                d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <div class="listaChat">
+                                        <ul>
+                                            <li>
+                                                asdasd
+                                            </li>
+                                            <li>
+                                                asdas
+                                            </li>
+                                            <li>
+                                                asdsa
+                                            </li>
+                                            <li>
+                                                asdas
+                                            </li>
+                                            <li>
+                                                asds
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mainChat">
+                            <div class="contentChat">
+
+                            </div>
+                        </div>
+                        <div class="textChat">
+                            <div class="contentTc">
+                                <div class="tcArea tcEmojiFile">
+                                    <div class="contIcontc">
+                                        <svg viewBox="0 0 24 24" width="24" height="24" class="ekdr8vow dhq51u3o">
+                                            <path fill="currentColor"
+                                                d="M9.153 11.603c.795 0 1.439-.879 1.439-1.962s-.644-1.962-1.439-1.962-1.439.879-1.439 1.962.644 1.962 1.439 1.962zm-3.204 1.362c-.026-.307-.131 5.218 6.063 5.551 6.066-.25 6.066-5.551 6.066-5.551-6.078 1.416-12.129 0-12.129 0zm11.363 1.108s-.669 1.959-5.051 1.959c-3.505 0-5.388-1.164-5.607-1.959 0 0 5.912 1.055 10.658 0zM11.804 1.011C5.609 1.011.978 6.033.978 12.228s4.826 10.761 11.021 10.761S23.02 18.423 23.02 12.228c.001-6.195-5.021-11.217-11.216-11.217zM12 21.354c-5.273 0-9.381-3.886-9.381-9.159s3.942-9.548 9.215-9.548 9.548 4.275 9.548 9.548c-.001 5.272-4.109 9.159-9.382 9.159zm3.108-9.751c.795 0 1.439-.879 1.439-1.962s-.644-1.962-1.439-1.962-1.439.879-1.439 1.962.644 1.962 1.439 1.962z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="contIcontc">
+                                        <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                            <path fill="currentColor"
+                                                d="M1.816 15.556v.002c0 1.502.584 2.912 1.646 3.972s2.472 1.647 3.974 1.647a5.58 5.58 0 0 0 3.972-1.645l9.547-9.548c.769-.768 1.147-1.767 1.058-2.817-.079-.968-.548-1.927-1.319-2.698-1.594-1.592-4.068-1.711-5.517-.262l-7.916 7.915c-.881.881-.792 2.25.214 3.261.959.958 2.423 1.053 3.263.215l5.511-5.512c.28-.28.267-.722.053-.936l-.244-.244c-.191-.191-.567-.349-.957.04l-5.506 5.506c-.18.18-.635.127-.976-.214-.098-.097-.576-.613-.213-.973l7.915-7.917c.818-.817 2.267-.699 3.23.262.5.501.802 1.1.849 1.685.051.573-.156 1.111-.589 1.543l-9.547 9.549a3.97 3.97 0 0 1-2.829 1.171 3.975 3.975 0 0 1-2.83-1.173 3.973 3.973 0 0 1-1.172-2.828c0-1.071.415-2.076 1.172-2.83l7.209-7.211c.157-.157.264-.579.028-.814L11.5 4.36a.572.572 0 0 0-.834.018l-7.205 7.207a5.577 5.577 0 0 0-1.645 3.971z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="tcArea tcBoxText">
+                                    <div class="tcGrowOne">
+                                        <div class="tcTextcont">
+                                            <textarea cols="3" rows="3" name="message" class="tcText"
+                                                id="message"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="tcGrowTwo">
+                                        <button class="contArrowSend">
+                                            <span class="arrowSend">
+                                                <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                                    <path fill="currentColor"
+                                                        d="M1.101 21.757 23.8 12.028 1.101 2.3l.011 7.912 13.623 1.816-13.623 1.817-.011 7.912z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boxInfo">
+
+                        <div class="panelHeader headerInfo">
+                            <div class="iconInfo">
+                                <div class="centerIcon">
+                                    <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24" class="">
+                                        <path
+                                            d="m19.1 17.2-5.3-5.3 5.3-5.3-1.8-1.8-5.3 5.4-5.3-5.3-1.8 1.7 5.3 5.3-5.3 5.3L6.7 19l5.3-5.3 5.3 5.3 1.8-1.8z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="titleInfo">
+                                <div class="centerTextI">
+                                    <p>Info. del <span id="tipoInfoChat">Grupo</span> </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="descripcionInfo">
+
+                            <div class="contentInfo">
+                                <div class="infoSection ISProfile">
+                                    <div class="ISPContProfile">
+                                        <div class="ISPContProfileData">
+                                            <div class="ISPImg">
+                                                <svg width="212" height="212" viewBox="0 0 212 212" fill="#54656ecb"
+                                                    class="">
+                                                    <path class="background"
+                                                        d="M105.946.25C164.318.25 211.64 47.596 211.64 106s-47.322 105.75-105.695 105.75C47.571 211.75.25 164.404.25 106S47.571.25 105.946.25Z"
+                                                        fill="#DFE5E7"></path>
+                                                    <path class="primary" clip-rule="evenodd"
+                                                        d="M102.282 77.286c0 10.671-8.425 19.285-18.94 19.285s-19.003-8.614-19.003-19.285C64.339 66.614 72.827 58 83.342 58s18.94 8.614 18.94 19.286Zm48.068 2.857c0 9.802-7.738 17.714-17.396 17.714-9.658 0-17.454-7.912-17.454-17.714s7.796-17.715 17.454-17.715c9.658 0 17.396 7.913 17.396 17.715Zm-67.01 29.285c-14.759 0-44.34 7.522-44.34 22.5v11.786c0 3.536 2.85 4.286 6.334 4.286h76.012c3.484 0 6.334-.75 6.334-4.286v-11.786c0-14.978-29.58-22.5-44.34-22.5Zm43.464 1.425c.903.018 1.681.033 2.196.033 14.759 0 45 6.064 45 21.043v9.642c0 3.536-2.85 6.429-6.334 6.429h-32.812c.697-1.993 1.141-4.179 1.141-6.429l-.245-10.5c0-9.561-5.614-13.213-11.588-17.1-1.39-.904-2.799-1.821-4.162-2.828a.843.843 0 0 1-.059-.073.594.594 0 0 0-.194-.184c1.596-.139 4.738-.078 7.057-.033Z">
+                                                    </path>
+                                                </svg>
+                                                <img src="/resources/img/users/bob.jpg" alt="#">
+                                            </div>
+                                            <div class="ISPdataImg">
+                                                <div class="ISPcontIcon">
+                                                    <span class="ISPIcon">
+                                                        <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                                            <path fill="currentColor"
+                                                                d="M21.317 4.381H10.971L9.078 2.45c-.246-.251-.736-.457-1.089-.457H4.905c-.352 0-.837.211-1.078.468L1.201 5.272C.96 5.529.763 6.028.763 6.38v1.878l-.002.01v11.189a1.92 1.92 0 0 0 1.921 1.921h18.634a1.92 1.92 0 0 0 1.921-1.921V6.302a1.92 1.92 0 0 0-1.92-1.921zM12.076 18.51a5.577 5.577 0 1 1 0-11.154 5.577 5.577 0 0 1 0 11.154zm0-9.506a3.929 3.929 0 1 0 0 7.858 3.929 3.929 0 0 0 0-7.858z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="ISPText">
+                                                    <p>AÑADIR IMAGEN DEL GRUPO</p>
+                                                    <ul class="ISPMenu">
+                                                        <li>Tomar Foto</li>
+                                                        <li>Subir Foto</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ISPName">
+                                        <div class="ISPNcontTxt">
+                                            <div class="ISPNtext">
+                                                <input type="text" name="nameGroupActive" minlength="4" maxlength="25"
+                                                    id="nameGroupActive" value="Autoenvios" size="12">
+                                            </div>
+                                            <div class="ISPNcontBtn">
+                                                <button type="submit" class="ISPNbtn">
+                                                    <span class="ISPNicon">
+                                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                                            <path fill="currentColor"
+                                                                d="M3.95 16.7v3.4h3.4l9.8-9.9-3.4-3.4-9.8 9.9zm15.8-9.1c.4-.4.4-.9 0-1.3l-2.1-2.1c-.4-.4-.9-.4-1.3 0l-1.6 1.6 3.4 3.4 1.6-1.6z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ISPDetails">
+                                        <div class="ISPDcont">
+                                            <span>Grupo ·&nbsp;</span>
+                                            <button class="ISPDbtn"><span>1 participante</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="infoSection ISDescripcion">
+                                    <div class="ISDcont">
+                                        <div class="ISDcontDescript">
+                                            <textarea placeholder="Añade una descripción del grupo" name="descripcion"
+                                                wrap="hard" id="" rows="2" cols="30" rows="10" minlength="1"
+                                                maxlength="480"></textarea>
+
+                                            <div class="ISDbtn">
+                                                <button type="submit" class="ISPNbtn">
+                                                    <span class="ISPNicon">
+                                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                                            <path fill="currentColor"
+                                                                d="M3.95 16.7v3.4h3.4l9.8-9.9-3.4-3.4-9.8 9.9zm15.8-9.1c.4-.4.4-.9 0-1.3l-2.1-2.1c-.4-.4-.9-.4-1.3 0l-1.6 1.6 3.4 3.4 1.6-1.6z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="ISDcreate">
+                                            <p class="ISDcreateText">Grupo creado por <span>X</span>, el
+                                                <span>22/12/22</span> a la(s)
+                                                <span>12:12 p.m.</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="infoSection ISFiles">
+                                    <div class="ISFcont">
+                                        <p>Archivos, fotos y documentos</p>
+                                        <div class="ISFicon"><span>10</span> <span><svg viewBox="0 0 10 21" width="10"
+                                                    height="21" class="">
+                                                    <path fill="currentColor"
+                                                        d="m1 15.75 5.2-5.2L1 5.35l1.5-1.5 6.5 6.7-6.6 6.6-1.4-1.4z">
+                                                    </path>
+                                                </svg></span> </div>
+                                    </div>
+                                </div>
+                                <div class="infoSection ISMembers">
+                                    <div class="ISMcontentData">
+                                        <div class="ISMtitle" style="background-color: transparent;">
+                                            <p><span>x</span> participantes</p>
+                                        </div>
+                                        <div class="ISMcard ">
+                                            <div class="ISMmember ISMaddMember">
+                                                <div class="ISMcontIcon">
+                                                    <span class="ISMicon">
+                                                        <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                                            <path fill="currentColor"
+                                                                d="M14.7 12c2 0 3.6-1.6 3.6-3.6s-1.6-3.6-3.6-3.6-3.6 1.6-3.6 3.6 1.6 3.6 3.6 3.6zm-8.1-1.8V7.5H4.8v2.7H2.1V12h2.7v2.7h1.8V12h2.7v-1.8H6.6zm8.1 3.6c-2.4 0-7.2 1.2-7.2 3.6v1.8H22v-1.8c-.1-2.4-4.9-3.6-7.3-3.6z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="ISMtext">
+                                                    <p>Añadir participante</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ISMcard ">
+                                            <div class="ISMmember">
+                                                <div class="ISMcontPicture">
+                                                    <div class="ISMpictureBox">
+                                                        <div class="ISMimg">
+                                                            <span class="ISMiconAlt">
+                                                                <svg viewBox="0 0 212 212" width="40" height="40"
+                                                                    class="">
+                                                                    <path fill="#DFE5E7" class="background"
+                                                                        d="M106.251.5C164.653.5 212 47.846 212 106.25S164.653 212 106.25 212C47.846 212 .5 164.654.5 106.25S47.846.5 106.251.5z">
+                                                                    </path>
+                                                                    <g fill="#FFF">
+                                                                        <path class="primary"
+                                                                            d="M173.561 171.615a62.767 62.767 0 0 0-2.065-2.955 67.7 67.7 0 0 0-2.608-3.299 70.112 70.112 0 0 0-3.184-3.527 71.097 71.097 0 0 0-5.924-5.47 72.458 72.458 0 0 0-10.204-7.026 75.2 75.2 0 0 0-5.98-3.055c-.062-.028-.118-.059-.18-.087-9.792-4.44-22.106-7.529-37.416-7.529s-27.624 3.089-37.416 7.529c-.338.153-.653.318-.985.474a75.37 75.37 0 0 0-6.229 3.298 72.589 72.589 0 0 0-9.15 6.395 71.243 71.243 0 0 0-5.924 5.47 70.064 70.064 0 0 0-3.184 3.527 67.142 67.142 0 0 0-2.609 3.299 63.292 63.292 0 0 0-2.065 2.955 56.33 56.33 0 0 0-1.447 2.324c-.033.056-.073.119-.104.174a47.92 47.92 0 0 0-1.07 1.926c-.559 1.068-.818 1.678-.818 1.678v.398c18.285 17.927 43.322 28.985 70.945 28.985 27.678 0 52.761-11.103 71.055-29.095v-.289s-.619-1.45-1.992-3.778a58.346 58.346 0 0 0-1.446-2.322zM106.002 125.5c2.645 0 5.212-.253 7.68-.737a38.272 38.272 0 0 0 3.624-.896 37.124 37.124 0 0 0 5.12-1.958 36.307 36.307 0 0 0 6.15-3.67 35.923 35.923 0 0 0 9.489-10.48 36.558 36.558 0 0 0 2.422-4.84 37.051 37.051 0 0 0 1.716-5.25c.299-1.208.542-2.443.725-3.701.275-1.887.417-3.827.417-5.811s-.142-3.925-.417-5.811a38.734 38.734 0 0 0-1.215-5.494 36.68 36.68 0 0 0-3.648-8.298 35.923 35.923 0 0 0-9.489-10.48 36.347 36.347 0 0 0-6.15-3.67 37.124 37.124 0 0 0-5.12-1.958 37.67 37.67 0 0 0-3.624-.896 39.875 39.875 0 0 0-7.68-.737c-21.162 0-37.345 16.183-37.345 37.345 0 21.159 16.183 37.342 37.345 37.342z">
+                                                                        </path>
+                                                                    </g>
+                                                                </svg>
+                                                            </span>
+                                                            <img src="/resources/img/users/bob.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ISMdata">
+                                                    <div class="ISMdataMember">
+                                                        <div class="ISMcontData">
+                                                            <p>Kevin asd</p>
+                                                            <span class="tag tagGreen">Admin. del grupo</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ISMdataMember">
+                                                        <div class="ISMcontData">
+                                                            <p>descripcion usuario</p>
+                                                            <span>~pseudonombre</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ISMmember">
+                                                <div class="ISMcontPicture">
+                                                    <div class="ISMpictureBox">
+                                                        <div class="ISMimg">
+                                                            <span class="ISMiconAlt">
+                                                                <svg viewBox="0 0 212 212" width="40" height="40"
+                                                                    class="">
+                                                                    <path fill="#DFE5E7" class="background"
+                                                                        d="M106.251.5C164.653.5 212 47.846 212 106.25S164.653 212 106.25 212C47.846 212 .5 164.654.5 106.25S47.846.5 106.251.5z">
+                                                                    </path>
+                                                                    <g fill="#FFF">
+                                                                        <path class="primary"
+                                                                            d="M173.561 171.615a62.767 62.767 0 0 0-2.065-2.955 67.7 67.7 0 0 0-2.608-3.299 70.112 70.112 0 0 0-3.184-3.527 71.097 71.097 0 0 0-5.924-5.47 72.458 72.458 0 0 0-10.204-7.026 75.2 75.2 0 0 0-5.98-3.055c-.062-.028-.118-.059-.18-.087-9.792-4.44-22.106-7.529-37.416-7.529s-27.624 3.089-37.416 7.529c-.338.153-.653.318-.985.474a75.37 75.37 0 0 0-6.229 3.298 72.589 72.589 0 0 0-9.15 6.395 71.243 71.243 0 0 0-5.924 5.47 70.064 70.064 0 0 0-3.184 3.527 67.142 67.142 0 0 0-2.609 3.299 63.292 63.292 0 0 0-2.065 2.955 56.33 56.33 0 0 0-1.447 2.324c-.033.056-.073.119-.104.174a47.92 47.92 0 0 0-1.07 1.926c-.559 1.068-.818 1.678-.818 1.678v.398c18.285 17.927 43.322 28.985 70.945 28.985 27.678 0 52.761-11.103 71.055-29.095v-.289s-.619-1.45-1.992-3.778a58.346 58.346 0 0 0-1.446-2.322zM106.002 125.5c2.645 0 5.212-.253 7.68-.737a38.272 38.272 0 0 0 3.624-.896 37.124 37.124 0 0 0 5.12-1.958 36.307 36.307 0 0 0 6.15-3.67 35.923 35.923 0 0 0 9.489-10.48 36.558 36.558 0 0 0 2.422-4.84 37.051 37.051 0 0 0 1.716-5.25c.299-1.208.542-2.443.725-3.701.275-1.887.417-3.827.417-5.811s-.142-3.925-.417-5.811a38.734 38.734 0 0 0-1.215-5.494 36.68 36.68 0 0 0-3.648-8.298 35.923 35.923 0 0 0-9.489-10.48 36.347 36.347 0 0 0-6.15-3.67 37.124 37.124 0 0 0-5.12-1.958 37.67 37.67 0 0 0-3.624-.896 39.875 39.875 0 0 0-7.68-.737c-21.162 0-37.345 16.183-37.345 37.345 0 21.159 16.183 37.342 37.345 37.342z">
+                                                                        </path>
+                                                                    </g>
+                                                                </svg>
+                                                            </span>
+                                                            <img src="/resources/img/users/bob.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ISMdata">
+                                                    <div class="ISMdataMember">
+                                                        <div class="ISMcontData">
+                                                            <p>Kevin asd</p>
+                                                            <span class="tag tagGrey">Integrante</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ISMdataMember">
+                                                        <div class="ISMcontData">
+                                                            <p>descripcion usuario</p>
+                                                            <span>~pseudonombre</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ISMmember">
+                                                <div class="ISMcontPicture">
+                                                    <div class="ISMpictureBox">
+                                                        <div class="ISMimg">
+                                                            <span class="ISMiconAlt">
+                                                                <svg viewBox="0 0 212 212" width="40" height="40"
+                                                                    class="">
+                                                                    <path fill="#DFE5E7" class="background"
+                                                                        d="M106.251.5C164.653.5 212 47.846 212 106.25S164.653 212 106.25 212C47.846 212 .5 164.654.5 106.25S47.846.5 106.251.5z">
+                                                                    </path>
+                                                                    <g fill="#FFF">
+                                                                        <path class="primary"
+                                                                            d="M173.561 171.615a62.767 62.767 0 0 0-2.065-2.955 67.7 67.7 0 0 0-2.608-3.299 70.112 70.112 0 0 0-3.184-3.527 71.097 71.097 0 0 0-5.924-5.47 72.458 72.458 0 0 0-10.204-7.026 75.2 75.2 0 0 0-5.98-3.055c-.062-.028-.118-.059-.18-.087-9.792-4.44-22.106-7.529-37.416-7.529s-27.624 3.089-37.416 7.529c-.338.153-.653.318-.985.474a75.37 75.37 0 0 0-6.229 3.298 72.589 72.589 0 0 0-9.15 6.395 71.243 71.243 0 0 0-5.924 5.47 70.064 70.064 0 0 0-3.184 3.527 67.142 67.142 0 0 0-2.609 3.299 63.292 63.292 0 0 0-2.065 2.955 56.33 56.33 0 0 0-1.447 2.324c-.033.056-.073.119-.104.174a47.92 47.92 0 0 0-1.07 1.926c-.559 1.068-.818 1.678-.818 1.678v.398c18.285 17.927 43.322 28.985 70.945 28.985 27.678 0 52.761-11.103 71.055-29.095v-.289s-.619-1.45-1.992-3.778a58.346 58.346 0 0 0-1.446-2.322zM106.002 125.5c2.645 0 5.212-.253 7.68-.737a38.272 38.272 0 0 0 3.624-.896 37.124 37.124 0 0 0 5.12-1.958 36.307 36.307 0 0 0 6.15-3.67 35.923 35.923 0 0 0 9.489-10.48 36.558 36.558 0 0 0 2.422-4.84 37.051 37.051 0 0 0 1.716-5.25c.299-1.208.542-2.443.725-3.701.275-1.887.417-3.827.417-5.811s-.142-3.925-.417-5.811a38.734 38.734 0 0 0-1.215-5.494 36.68 36.68 0 0 0-3.648-8.298 35.923 35.923 0 0 0-9.489-10.48 36.347 36.347 0 0 0-6.15-3.67 37.124 37.124 0 0 0-5.12-1.958 37.67 37.67 0 0 0-3.624-.896 39.875 39.875 0 0 0-7.68-.737c-21.162 0-37.345 16.183-37.345 37.345 0 21.159 16.183 37.342 37.345 37.342z">
+                                                                        </path>
+                                                                    </g>
+                                                                </svg>
+                                                            </span>
+                                                            <img src="/resources/img/users/bob.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ISMdata">
+                                                    <div class="ISMdataMember">
+                                                        <div class="ISMcontData">
+                                                            <p>Kevin</p>
+                                                            <span class="tag tagYellow">Moderador</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ISMdataMember">
+                                                        <div class="ISMcontData">
+                                                            <p>descripcion usuario</p>
+                                                            <span>~pseudonombre</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="infoSection ISTrash">
+                                    <div class="ISTContBtn">
+                                        <div class="ISTcard">
+                                            <div class="ISTcontentCards">
+                                                <div class="ISTcard">
+                                                    <span>
+                                                        <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                                            <path fill="currentColor"
+                                                                d="m16.6 8.1 1.2-1.2 5.1 5.1-5.1 5.1-1.2-1.2 3-3H8.7v-1.8h10.9l-3-3zM3.8 19.9h9.1c1 0 1.8-.8 1.8-1.8v-1.4h-1.8v1.4H3.8V5.8h9.1v1.4h1.8V5.8c0-1-.8-1.8-1.8-1.8H3.8C2.8 4 2 4.8 2 5.8v12.4c0 .9.8 1.7 1.8 1.7z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="ISTcard">
+                                                    <span>
+                                                        Salir del grupo
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ISTcard">
+                                            <div class="ISTcontentCards">
+                                                <div class="ISTcard">
+                                                    <span>
+                                                        <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                                            <path fill="currentColor"
+                                                                d="M6 18c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V6H6v12zM19 3h-3.5l-1-1h-5l-1 1H5v2h14V3z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="ISTcard">
+                                                    <span>
+                                                        Eliminar Grupo
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script-front.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+
+</html>
