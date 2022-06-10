@@ -26,7 +26,6 @@ p {
     padding: 0;
     margin: 0;
     word-wrap: break-word;
-    word-break: break-all;
 }
 
 textarea {
@@ -94,6 +93,12 @@ img {
     transition: 0.3s;
 }
 
+.hideShow .BoxChat {}
+
+.hideShow .boxInfo {
+    display: none;
+}
+
 .BoxContacts {
     position: relative;
     display: flex;
@@ -127,6 +132,7 @@ img {
 .iChat a,
 .iMenu a {
     display: flex;
+    transition: 0.2s;
 }
 
 .iUser img {
@@ -400,6 +406,7 @@ img {
     align-items: center;
     color: #54656E;
     padding: 7px;
+    transition: 0.2s;
 }
 
 .headerChatContent a:active {
@@ -419,32 +426,191 @@ img {
     flex-grow: 8;
     background-color: #EFEAE3;
     user-select: text;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .mainChat::after {
     content: '';
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     background-image: url('../resources/img/bg-chat.png');
     opacity: 0.4;
+    z-index: 1;
 }
 
-.contentChat {}
+.MCcontentChat {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 
+.MCcontentChat,
+.MCchat {
+    display: flex;
+    flex-grow: 10;
+    width: 100%;
+    height: 100%;
+}
 
+.MCchat {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}
 
+.MCbox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 9%;
+    padding-right: 9%;
+    margin-bottom: 12px;
+}
 
+.MCDates,
+.MCinfo {
+    justify-content: center;
+}
 
+.MCcontentBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.MCbtn {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px 12px 6px;
+    border-radius: 7.5px;
+    text-align: center;
+    box-shadow: 0 1px 0.5px rgba(11, 20, 26, 0.13);
+    margin-bottom: 0;
+}
 
+.MCbtnText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(84, 101, 111);
+}
 
+.MCdateBtn {
+    text-transform: uppercase;
+}
+
+.MCinfoBtn {
+    cursor: pointer;
+}
+
+.MCcontMsgOut {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.MCcontMsgIn {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.MCcontentMsg {
+    display: flex;
+    position: relative;
+    background-color: #d9fdd3;
+    border-radius: 7.5px;
+    padding: 6px 7px 8px 9px;
+    z-index: 10;
+    box-shadow: 0 1px 0.5px rgb(11 20 26 / 13%);
+}
+
+.MCtailOut {
+    border-top-right-radius: 0px;
+    max-width: 420px;
+}
+
+.MCcontTail-out {
+    position: absolute;
+    top: -4px;
+    right: -8px;
+    z-index: 10;
+    color: #d9fdd3;
+}
+
+.MCtailIn {
+    border-top-left-radius: 0px;
+    max-width: 420px;
+}
+
+.MCcontTail-in {
+    position: absolute;
+    top: -4px;
+    left: -8px;
+    z-index: 10;
+    color: #d9fdd3;
+}
+
+.MCboxInnerMsg {
+    display: flex;
+}
+
+.MCcontDateState {}
+
+.MCcontMsjText {}
+
+.MCmsjText {
+    font-size: 14.2px;
+    font-weight: 400;
+    word-break: break-all;
+    word-wrap: break-all;
+}
+
+.MCmsj {
+    word-break: break-word;
+}
+
+.MCspace {
+    width: 84px;
+}
+
+.MCstateDate {
+    float: right;
+}
+
+.MCcontHourState {
+    display: flex;
+    font-size: 13px;
+}
+
+.MCmsgHour {
+    color: #8696a0;
+    padding-right: 5px;
+}
+
+.MCcheckStatus {
+    display: flex;
+}
+
+.MCcheck {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8696a0;
+}
+
+.MCchkBlue {
+    color: #53bdeb;
+}
 
 .textChat {
     display: flex;
     position: relative;
-    max-height: 62px;
-    flex-grow: 1;
+    min-height: 62px;
+    /* flex-grow: 1; */
     background-color: #F0F2F5;
 }
 
@@ -477,6 +643,7 @@ img {
     cursor: pointer;
     padding: 7px;
     color: #54656D;
+    transition: 0.2s;
 }
 
 .contIcontc:active {
@@ -534,6 +701,7 @@ img {
     justify-content: center;
     align-items: center;
     color: #54656D;
+    transition: 0.2s;
 }
 
 .arrowSend:active {
@@ -551,6 +719,7 @@ img {
     background-color: rgb(240, 242, 245);
     user-select: text;
     overflow: hidden;
+    transition: all 1s ease-out 0.5s;
 }
 
 .headerInfo {
@@ -1065,4 +1234,62 @@ img {
     width: 100%;
     display: flex;
     color: #e90c3b;
+}
+
+
+@media (min-width: 1200px) {
+    .boxWsp {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .headerChat {
+        justify-content: normal;
+    }
+
+    .BCcontContact {
+        display: flex;
+    }
+
+    .detailsChat .limitText {
+        max-width: 400px;
+    }
+
+    .BCcontHeader {
+        display: flex;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .contactActive {
+        flex-grow: unset;
+    }
+
+    .headerChatIcons {
+        flex-grow: unset;
+        justify-content: normal;
+        width: auto;
+    }
+
+    .MCtailOut {
+        max-width: 360px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .boxWsp {
+        width: calc(100% - 38px);
+        max-width: 1600px;
+        height: calc(100% - 38px);
+    }
+
+    .detailsChat .limitText {
+        max-width: 620px;
+    }
+
+    .contactActive {
+        flex-grow: 8;
+    }
 }
