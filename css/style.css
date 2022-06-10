@@ -93,9 +93,12 @@ img {
     transition: 0.3s;
 }
 
-.hideShow .BoxChat {}
+.hideInfo .MCtailIn,
+.hideInfo .MCtailOut {
+    max-width: 500px;
+}
 
-.hideShow .boxInfo {
+.hideInfo .boxInfo {
     display: none;
 }
 
@@ -557,10 +560,6 @@ img {
 .MCboxInnerMsg {
     display: flex;
 }
-
-.MCcontDateState {}
-
-.MCcontMsjText {}
 
 .MCmsjText {
     font-size: 14.2px;
@@ -1291,5 +1290,10 @@ img {
 
     .contactActive {
         flex-grow: 8;
+    }
+
+    .hideInfo .MCtailIn,
+    .hideInfo .MCtailOut {
+        max-width: 600px;
     }
 }
