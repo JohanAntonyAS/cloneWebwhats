@@ -98,6 +98,10 @@ img {
     max-width: 500px;
 }
 
+.hideInfo .tcTextcont {
+    width: 99.5%;
+}
+
 .hideInfo .boxInfo {
     display: none;
 }
@@ -110,6 +114,24 @@ img {
     max-width: 400px;
     height: 100%;
     flex-direction: column;
+}
+
+.BoxProfile {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    outline: 1px solid red;
+    z-index: 100;
+    background-color: #fff;
+}
+
+.BoxProfile::before {
+    content: '';
+    position: absolute;
+    background-color: #07806a;
+    width: 100%;
+    height: 106px;
 }
 
 .panelHeader {
@@ -629,6 +651,8 @@ img {
 .tcEmojiFile {
     flex-grow: 1;
     max-width: 94px;
+    padding-bottom: 12px;
+    align-items: flex-end;
 }
 
 .tcBoxText {
@@ -657,21 +681,27 @@ img {
 }
 
 .tcTextcont {
-    padding: 5px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 8px;
+    margin: 10px 0;
     width: 98%;
-    height: 46px;
     background-color: #ffffff;
     border-radius: 8px;
+    max-height: 170px;
+    transition: 0.3s;
 }
 
 .tcText {
     font-size: 15px;
     font-weight: 400;
     width: 100%;
-    height: 37px;
     border: none;
     line-height: 1.2;
     outline: none;
+    max-height: 130px;
+    overflow-y: scroll !important;
 }
 
 .tcGrowTwo {
@@ -680,7 +710,8 @@ img {
     max-width: 50px;
     height: 100%;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
+    padding-bottom: 12px;
 }
 
 .contArrowSend {
@@ -691,6 +722,7 @@ img {
     border: none;
     outline: none;
     cursor: pointer;
+    padding: 7px;
 }
 
 .arrowSend {
