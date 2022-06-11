@@ -582,6 +582,7 @@ img {
 .MCtailIn {
     border-top-left-radius: 0px;
     max-width: 420px;
+    background-color: #fff;
 }
 
 .MCcontTail-in {
@@ -589,7 +590,7 @@ img {
     top: -4px;
     left: -8px;
     z-index: 10;
-    color: #d9fdd3;
+    color: #fff;
 }
 
 .MCboxInnerMsg {
