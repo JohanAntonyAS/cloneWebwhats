@@ -90,7 +90,6 @@ img {
     max-width: 1600px;
     height: calc(100% - 38px);
     background: #fff;
-    transition: 0.3s;
 }
 
 .hideInfo .MCtailIn,
@@ -106,7 +105,7 @@ img {
     display: none;
 }
 
-.BoxContacts {
+.boxSide {
     position: relative;
     display: flex;
     flex: 25 0 0;
@@ -116,7 +115,7 @@ img {
     flex-direction: column;
 }
 
-.BoxProfile {
+.BoxSideContacts {
     display: none;
     position: absolute;
     height: 100%;
@@ -126,13 +125,13 @@ img {
     background-color: #fff;
 }
 
-.BoxProfile::before {
+/* .BoxSideContacts::before {
     content: '';
     position: absolute;
     background-color: #07806a;
     width: 100%;
     height: 106px;
-}
+} */
 
 .panelHeader {
     position: relative;
@@ -263,6 +262,10 @@ img {
     background-color: #F0F2F5;
 }
 
+.notActiveContact {
+    background-color: #ffffff;
+}
+
 .pictureContact {
     display: flex;
     align-items: center;
@@ -347,7 +350,6 @@ img {
     height: 100%;
     min-width: 597px;
     flex: 45;
-    background-color: blue;
     user-select: text;
 }
 
@@ -443,6 +445,7 @@ img {
     position: absolute;
     left: -38px;
     bottom: -124px;
+    z-index: 200;
 }
 
 .mainChat {
@@ -486,6 +489,14 @@ img {
     height: 100%;
     width: 100%;
     overflow-y: scroll;
+}
+
+.ShowChat {
+    display: flex;
+}
+
+.hideChat {
+    display: none;
 }
 
 .MCbox {
@@ -1292,6 +1303,18 @@ img {
         position: relative;
         width: 100%;
         justify-content: space-between;
+    }
+
+    .BCtopHeader {
+        width: 100%;
+    }
+
+    .showTopHeader {
+        display: flex;
+    }
+
+    .hideTopHeader {
+        display: none;
     }
 
     .contactActive {

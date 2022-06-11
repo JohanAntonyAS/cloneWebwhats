@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhatsApp Web Clone</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -14,13 +15,27 @@
         <div class="wrapper">
             <div class="container">
                 <div class="boxWsp" id="Wsp">
-                    <div class="BoxContacts">
-                        <div class="BoxProfile">
-                            <div>
+                    <div class="boxSide">
+
+                        <div class="BoxSideContacts">
+
+                            <div class="boxProfileUser">
+                                <div class="">
+
+                                </div>
+                            </div>
+                            <div class="boxSettings">
                                 <div>
 
                                 </div>
                             </div>
+
+                            <div class="boxContacts">
+                                <div>
+
+                                </div>
+                            </div>
+
                         </div>
 
                         <header class="panelHeader">
@@ -79,7 +94,7 @@
                         <div class="tabIndex">
 
                             <div class="chatList">
-                                <div class="contact activeContact">
+                                <div class="contact activeContact" id="contact0" data-element="0">
                                     <div class="pictureContact">
                                         <div class="pictureContent">
                                             <img src="resources/img/users/bob.jpg" alt="">
@@ -88,8 +103,28 @@
                                     <div class="resumeContact">
                                         <div class="flex">
                                             <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
+                                                <p class="nameContact textOverflow">noe</p>
+                                            </div>
+                                            <div class="containerText">
+                                                <span class="contactHour"> 23/5/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <p class="resumeChat textOverflow"> Lorem ipsum dolor sit amet</p>
+                                            <a href="">á</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact notActiveContact" id="contact1" data-element="1">
+                                    <div class="pictureContact">
+                                        <div class="pictureContent">
+                                            <img src="resources/img/users/bob.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="resumeContact">
+                                        <div class="flex">
+                                            <div class="containerText">
+                                                <p class="nameContact textOverflow">jose</p>
                                             </div>
                                             <div class="containerText">
                                                 <span class="contactHour"> 23/5/2022</span>
@@ -103,8 +138,7 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="contact">
+                                <div class="contact notActiveContact" id="contact2" data-element="2">
                                     <div class="pictureContact">
                                         <div class="pictureContent">
                                             <img src="resources/img/users/bob.jpg" alt="">
@@ -113,8 +147,7 @@
                                     <div class="resumeContact">
                                         <div class="flex">
                                             <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
+                                                <p class="nameContact textOverflow">maria</p>
                                             </div>
                                             <div class="containerText">
                                                 <span class="contactHour"> 23/5/2022</span>
@@ -128,8 +161,7 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="contact">
+                                <div class="contact notActiveContact" id="contact3" data-element="3">
                                     <div class="pictureContact">
                                         <div class="pictureContent">
                                             <img src="resources/img/users/bob.jpg" alt="">
@@ -138,8 +170,7 @@
                                     <div class="resumeContact">
                                         <div class="flex">
                                             <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
+                                                <p class="nameContact textOverflow">jesus</p>
                                             </div>
                                             <div class="containerText">
                                                 <span class="contactHour"> 23/5/2022</span>
@@ -153,437 +184,258 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="contact">
-                                    <div class="pictureContact">
-                                        <div class="pictureContent">
-                                            <img src="resources/img/users/bob.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="resumeContact">
-                                        <div class="flex">
-                                            <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
-                                            </div>
-                                            <div class="containerText">
-                                                <span class="contactHour"> 23/5/2022</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <p class="resumeChat textOverflow"> test test test test
-                                                tesasdasdasdstasdasdsadasdasdasdasd
-                                                testtest test test test</p>
-                                            <a href="">á</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="contact">
-                                    <div class="pictureContact">
-                                        <div class="pictureContent">
-                                            <img src="resources/img/users/bob.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="resumeContact">
-                                        <div class="flex">
-                                            <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
-                                            </div>
-                                            <div class="containerText">
-                                                <span class="contactHour"> 23/5/2022</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <p class="resumeChat textOverflow"> test test test test
-                                                tesasdasdasdstasdasdsadasdasdasdasd
-                                                testtest test test test</p>
-                                            <a href="">á</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="contact">
-                                    <div class="pictureContact">
-                                        <div class="pictureContent">
-                                            <img src="resources/img/users/bob.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="resumeContact">
-                                        <div class="flex">
-                                            <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
-                                            </div>
-                                            <div class="containerText">
-                                                <span class="contactHour"> 23/5/2022</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <p class="resumeChat textOverflow"> test test test test
-                                                tesasdasdasdstasdasdsadasdasdasdasd
-                                                testtest test test test</p>
-                                            <a href="">á</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contact">
-                                    <div class="pictureContact">
-                                        <div class="pictureContent">
-                                            <img src="resources/img/users/bob.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="resumeContact">
-                                        <div class="flex">
-                                            <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
-                                            </div>
-                                            <div class="containerText">
-                                                <span class="contactHour"> 23/5/2022</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <p class="resumeChat textOverflow"> test test test test
-                                                tesasdasdasdstasdasdsadasdasdasdasd
-                                                testtest test test test</p>
-                                            <a href="">á</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contact">
-                                    <div class="pictureContact">
-                                        <div class="pictureContent">
-                                            <img src="resources/img/users/bob.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="resumeContact">
-                                        <div class="flex">
-                                            <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
-                                            </div>
-                                            <div class="containerText">
-                                                <span class="contactHour"> 23/5/2022</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <p class="resumeChat textOverflow"> test test test test
-                                                tesasdasdasdstasdasdsadasdasdasdasd
-                                                testtest test test test</p>
-                                            <a href="">á</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contact">
-                                    <div class="pictureContact">
-                                        <div class="pictureContent">
-                                            <img src="resources/img/users/bob.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="resumeContact">
-                                        <div class="flex">
-                                            <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
-                                            </div>
-                                            <div class="containerText">
-                                                <span class="contactHour"> 23/5/2022</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <p class="resumeChat textOverflow"> test test test test
-                                                tesasdasdasdstasdasdsadasdasdasdasd
-                                                testtest test test test</p>
-                                            <a href="">á</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contact">
-                                    <div class="pictureContact">
-                                        <div class="pictureContent">
-                                            <img src="resources/img/users/bob.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="resumeContact">
-                                        <div class="flex">
-                                            <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
-                                            </div>
-                                            <div class="containerText">
-                                                <span class="contactHour"> 23/5/2022</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <p class="resumeChat textOverflow"> test test test test
-                                                tesasdasdasdstasdasdsadasdasdasdasd
-                                                testtest test test test</p>
-                                            <a href="">á</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contact">
-                                    <div class="pictureContact">
-                                        <div class="pictureContent">
-                                            <img src="resources/img/users/bob.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="resumeContact">
-                                        <div class="flex">
-                                            <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
-                                            </div>
-                                            <div class="containerText">
-                                                <span class="contactHour"> 23/5/2022</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <p class="resumeChat textOverflow"> test test test test
-                                                tesasdasdasdstasdasdsadasdasdasdasd
-                                                testtest test test test</p>
-                                            <a href="">á</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contact">
-                                    <div class="pictureContact">
-                                        <div class="pictureContent">
-                                            <img src="resources/img/users/bob.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="resumeContact">
-                                        <div class="flex">
-                                            <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
-                                            </div>
-                                            <div class="containerText">
-                                                <span class="contactHour"> 23/5/2022</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <p class="resumeChat textOverflow"> test test test test
-                                                tesasdasdasdstasdasdsadasdasdasdasd
-                                                testtest test test test</p>
-                                            <a href="">á</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contact">
-                                    <div class="pictureContact">
-                                        <div class="pictureContent">
-                                            <img src="resources/img/users/bob.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="resumeContact">
-                                        <div class="flex">
-                                            <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
-                                            </div>
-                                            <div class="containerText">
-                                                <span class="contactHour"> 23/5/2022</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <p class="resumeChat textOverflow"> test test test test
-                                                tesasdasdasdstasdasdsadasdasdasdasd
-                                                testtest test test test</p>
-                                            <a href="">á</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contact">
-                                    <div class="pictureContact">
-                                        <div class="pictureContent">
-                                            <img src="resources/img/users/bob.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="resumeContact">
-                                        <div class="flex">
-                                            <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
-                                            </div>
-                                            <div class="containerText">
-                                                <span class="contactHour"> 23/5/2022</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <p class="resumeChat textOverflow"> test test test test
-                                                tesasdasdasdstasdasdsadasdasdasdasd
-                                                testtest test test test</p>
-                                            <a href="">á</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contact">
-                                    <div class="pictureContact">
-                                        <div class="pictureContent">
-                                            <img src="resources/img/users/bob.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="resumeContact">
-                                        <div class="flex">
-                                            <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
-                                            </div>
-                                            <div class="containerText">
-                                                <span class="contactHour"> 23/5/2022</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <p class="resumeChat textOverflow"> test test test test
-                                                tesasdasdasdstasdasdsadasdasdasdasd
-                                                testtest test test test</p>
-                                            <a href="">á</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contact">
-                                    <div class="pictureContact">
-                                        <div class="pictureContent">
-                                            <img src="resources/img/users/bob.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="resumeContact">
-                                        <div class="flex">
-                                            <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
-                                            </div>
-                                            <div class="containerText">
-                                                <span class="contactHour"> 23/5/2022</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <p class="resumeChat textOverflow"> test test test test
-                                                tesasdasdasdstasdasdsadasdasdasdasd
-                                                testtest test test test</p>
-                                            <a href="">á</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contact">
-                                    <div class="pictureContact">
-                                        <div class="pictureContent">
-                                            <img src="resources/img/users/bob.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="resumeContact">
-                                        <div class="flex">
-                                            <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
-                                            </div>
-                                            <div class="containerText">
-                                                <span class="contactHour"> 23/5/2022</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <p class="resumeChat textOverflow"> test test test test
-                                                tesasdasdasdstasdasdsadasdasdasdasd
-                                                testtest test test test</p>
-                                            <a href="">á</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contact">
-                                    <div class="pictureContact">
-                                        <div class="pictureContent">
-                                            <img src="resources/img/users/bob.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="resumeContact">
-                                        <div class="flex">
-                                            <div class="containerText">
-                                                <p class="nameContact textOverflow">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd sad</p>
-                                            </div>
-                                            <div class="containerText">
-                                                <span class="contactHour"> 23/5/2022</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <p class="resumeChat textOverflow"> test test test test
-                                                tesasdasdasdstasdasdsadasdasdasdasd
-                                                testtest test test test</p>
-                                            <a href="">á</a>
-                                        </div>
-                                    </div>
-                                </div>
-
 
                             </div>
                         </div>
                     </div>
                     <div class="BoxChat">
                         <div class="panelHeader headerChat">
-                            <div class="BCcontHeader">
-                                <div class="contactActive" onclick="showInfo()">
-                                    <div class="BCcontContact">
-                                        <div class="contactActiveImg">
-                                            <div class="contactActiveContent">
-                                                <img src="resources/img/users/bob.jpg" alt="">
+
+                            <div class="BCtopHeader showTopHeader" id="thead0" data-element="0">
+                                <div class="BCcontHeader">
+                                    <div class="contactActive" onclick="showInfo()">
+                                        <div class="BCcontContact">
+                                            <div class="contactActiveImg">
+                                                <div class="contactActiveContent">
+                                                    <img src="resources/img/users/bob.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="detailsChat">
+                                                <div class="flex">
+                                                    <p class="textOverflow limitText one">noe</p>
+                                                </div>
+                                                <div class="flex">
+                                                    <p class="textOverflow limitText two">arca</p>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="detailsChat">
-                                            <div class="flex">
-                                                <p class="textOverflow limitText one">Kevin sad asasdasdasdasdsadasdda
-                                                    asdasd
-                                                    sad</p>
+
+                                    </div>
+                                    <div class="headerChatIcons">
+                                        <div class="headerChatContent">
+                                            <a href="#">
+                                                <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                                    <path fill="currentColor"
+                                                        d="M15.009 13.805h-.636l-.22-.219a5.184 5.184 0 0 0 1.256-3.386 5.207 5.207 0 1 0-5.207 5.208 5.183 5.183 0 0 0 3.385-1.255l.221.22v.635l4.004 3.999 1.194-1.195-3.997-4.007zm-4.808 0a3.605 3.605 0 1 1 0-7.21 3.605 3.605 0 0 1 0 7.21z">
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="headerChatContent">
+                                            <a href="#">
+                                                <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                                    <path fill="currentColor"
+                                                        d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z">
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                            <div class="listaChat">
+                                                <ul>
+                                                    <li>
+                                                        asdasd
+                                                    </li>
+                                                    <li>
+                                                        asdas
+                                                    </li>
+                                                    <li>
+                                                        asdsa
+                                                    </li>
+                                                    <li>
+                                                        asdas
+                                                    </li>
+                                                    <li>
+                                                        asds
+                                                    </li>
+                                                </ul>
                                             </div>
-                                            <div class="flex">
-                                                <p class="textOverflow limitText two"> test test test test
-                                                    tesasdasdasdstasdasdsadasdasdasdasd
-                                                    testtest test test test</p>
-                                            </div>
+
                                         </div>
                                     </div>
-
                                 </div>
-                                <div class="headerChatIcons">
-                                    <div class="headerChatContent">
-                                        <a href="#">
-                                            <svg viewBox="0 0 24 24" width="24" height="24" class="">
-                                                <path fill="currentColor"
-                                                    d="M15.009 13.805h-.636l-.22-.219a5.184 5.184 0 0 0 1.256-3.386 5.207 5.207 0 1 0-5.207 5.208 5.183 5.183 0 0 0 3.385-1.255l.221.22v.635l4.004 3.999 1.194-1.195-3.997-4.007zm-4.808 0a3.605 3.605 0 1 1 0-7.21 3.605 3.605 0 0 1 0 7.21z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                    <div class="headerChatContent">
-                                        <a href="#">
-                                            <svg viewBox="0 0 24 24" width="24" height="24" class="">
-                                                <path fill="currentColor"
-                                                    d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                        <div class="listaChat">
-                                            <ul>
-                                                <li>
-                                                    asdasd
-                                                </li>
-                                                <li>
-                                                    asdas
-                                                </li>
-                                                <li>
-                                                    asdsa
-                                                </li>
-                                                <li>
-                                                    asdas
-                                                </li>
-                                                <li>
-                                                    asds
-                                                </li>
-                                            </ul>
+                            </div>
+                            <div class="BCtopHeader hideTopHeader" id="thead1" data-element="1">
+                                <div class="BCcontHeader">
+                                    <div class="contactActive" onclick="showInfo()">
+                                        <div class="BCcontContact">
+                                            <div class="contactActiveImg">
+                                                <div class="contactActiveContent">
+                                                    <img src="resources/img/users/bob.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="detailsChat">
+                                                <div class="flex">
+                                                    <p class="textOverflow limitText one">jose</p>
+                                                </div>
+                                                <div class="flex">
+                                                    <p class="textOverflow limitText two"> padre</p>
+                                                </div>
+                                            </div>
                                         </div>
 
+                                    </div>
+                                    <div class="headerChatIcons">
+                                        <div class="headerChatContent">
+                                            <a href="#">
+                                                <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                                    <path fill="currentColor"
+                                                        d="M15.009 13.805h-.636l-.22-.219a5.184 5.184 0 0 0 1.256-3.386 5.207 5.207 0 1 0-5.207 5.208 5.183 5.183 0 0 0 3.385-1.255l.221.22v.635l4.004 3.999 1.194-1.195-3.997-4.007zm-4.808 0a3.605 3.605 0 1 1 0-7.21 3.605 3.605 0 0 1 0 7.21z">
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="headerChatContent">
+                                            <a href="#">
+                                                <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                                    <path fill="currentColor"
+                                                        d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z">
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                            <div class="listaChat">
+                                                <ul>
+                                                    <li>
+                                                        asdasd
+                                                    </li>
+                                                    <li>
+                                                        asdas
+                                                    </li>
+                                                    <li>
+                                                        asdsa
+                                                    </li>
+                                                    <li>
+                                                        asdas
+                                                    </li>
+                                                    <li>
+                                                        asds
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="BCtopHeader hideTopHeader" id="thead2" data-element="2">
+                                <div class="BCcontHeader">
+                                    <div class="contactActive" onclick="showInfo()">
+                                        <div class="BCcontContact">
+                                            <div class="contactActiveImg">
+                                                <div class="contactActiveContent">
+                                                    <img src="resources/img/users/bob.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="detailsChat">
+                                                <div class="flex">
+                                                    <p class="textOverflow limitText one">maria</p>
+                                                </div>
+                                                <div class="flex">
+                                                    <p class="textOverflow limitText two">madre</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="headerChatIcons">
+                                        <div class="headerChatContent">
+                                            <a href="#">
+                                                <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                                    <path fill="currentColor"
+                                                        d="M15.009 13.805h-.636l-.22-.219a5.184 5.184 0 0 0 1.256-3.386 5.207 5.207 0 1 0-5.207 5.208 5.183 5.183 0 0 0 3.385-1.255l.221.22v.635l4.004 3.999 1.194-1.195-3.997-4.007zm-4.808 0a3.605 3.605 0 1 1 0-7.21 3.605 3.605 0 0 1 0 7.21z">
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="headerChatContent">
+                                            <a href="#">
+                                                <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                                    <path fill="currentColor"
+                                                        d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z">
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                            <div class="listaChat">
+                                                <ul>
+                                                    <li>
+                                                        asdasd
+                                                    </li>
+                                                    <li>
+                                                        asdas
+                                                    </li>
+                                                    <li>
+                                                        asdsa
+                                                    </li>
+                                                    <li>
+                                                        asdas
+                                                    </li>
+                                                    <li>
+                                                        asds
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="BCtopHeader hideTopHeader" id="thead3" data-element="3">
+                                <div class="BCcontHeader">
+                                    <div class="contactActive" onclick="showInfo()">
+                                        <div class="BCcontContact">
+                                            <div class="contactActiveImg">
+                                                <div class="contactActiveContent">
+                                                    <img src="resources/img/users/bob.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="detailsChat">
+                                                <div class="flex">
+                                                    <p class="textOverflow limitText one">jesus</p>
+                                                </div>
+                                                <div class="flex">
+                                                    <p class="textOverflow limitText two">hijo</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="headerChatIcons">
+                                        <div class="headerChatContent">
+                                            <a href="#">
+                                                <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                                    <path fill="currentColor"
+                                                        d="M15.009 13.805h-.636l-.22-.219a5.184 5.184 0 0 0 1.256-3.386 5.207 5.207 0 1 0-5.207 5.208 5.183 5.183 0 0 0 3.385-1.255l.221.22v.635l4.004 3.999 1.194-1.195-3.997-4.007zm-4.808 0a3.605 3.605 0 1 1 0-7.21 3.605 3.605 0 0 1 0 7.21z">
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="headerChatContent">
+                                            <a href="#">
+                                                <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                                    <path fill="currentColor"
+                                                        d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z">
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                            <div class="listaChat">
+                                                <ul>
+                                                    <li>
+                                                        asdasd
+                                                    </li>
+                                                    <li>
+                                                        asdas
+                                                    </li>
+                                                    <li>
+                                                        asdsa
+                                                    </li>
+                                                    <li>
+                                                        asdas
+                                                    </li>
+                                                    <li>
+                                                        asds
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -591,12 +443,13 @@
                         </div>
                         <div class="mainChat">
                             <div class="MCcontentChat">
-                                <div class="MCchat">
+
+                                <div class="MCchat ShowChat" id="chat0" data-element="0">
                                     <div class="MCbox MCDates">
                                         <div class="MCcontentBtn">
                                             <button class="MCbtn MCdateBtn">
                                                 <span class="MCbtnText">
-                                                    hoy 15/08/22
+                                                    hoy 18/08/22
                                                 </span>
                                             </button>
                                         </div>
@@ -621,10 +474,107 @@
                                                     <div class="MCcontDateState">
                                                         <div class="MCcontMsjText">
                                                             <div class="MCmsjText">
-                                                                <p class="MCmsj">texto texto mensaje mensaje hola hola
-                                                                    hola hola hola hola hola texto texto mensaje mensaje
-                                                                    hola hola hola hola hola hola hola hola hola hola
-                                                                    hola
+                                                                <p class="MCmsj">hola
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="MCstateDate">
+                                                            <div class="MCcontHourState">
+                                                                <span class="MCmsgHour">7:30 p. m.</span>
+                                                                <div class="MCcheckStatus">
+                                                                    <span class="MCcheck">
+                                                                        <svg viewBox="0 0 18 18" width="18" height="18"
+                                                                            class="">
+                                                                            <path fill="currentColor"
+                                                                                d="m17.394 5.035-.57-.444a.434.434 0 0 0-.609.076l-6.39 8.198a.38.38 0 0 1-.577.039l-.427-.388a.381.381 0 0 0-.578.038l-.451.576a.497.497 0 0 0 .043.645l1.575 1.51a.38.38 0 0 0 .577-.039l7.483-9.602a.436.436 0 0 0-.076-.609zm-4.892 0-.57-.444a.434.434 0 0 0-.609.076l-6.39 8.198a.38.38 0 0 1-.577.039l-2.614-2.556a.435.435 0 0 0-.614.007l-.505.516a.435.435 0 0 0 .007.614l3.887 3.8a.38.38 0 0 0 .577-.039l7.483-9.602a.435.435 0 0 0-.075-.609z">
+                                                                            </path>
+                                                                        </svg>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="MCbox MCmsgIn">
+                                        <div class="MCcontMsgIn">
+                                            <div class="MCcontentMsg MCtailIn">
+                                                <div class="MCcontTail-in">
+                                                    <span class="MCtail-in">
+                                                        <svg viewBox="0 0 8 13" width="8" height="13" class="">
+                                                            <path opacity=".13" fill="#0000000"
+                                                                d="M1.533 3.568 8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z">
+                                                            </path>
+                                                            <path fill="currentColor"
+                                                                d="M1.533 2.568 8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="MCboxInnerMsg">
+                                                    <span aria-label="nombre del receptor"></span>
+                                                    <div class="MCcontDateState">
+                                                        <div class="MCcontMsjText">
+                                                            <div class="MCmsjText">
+                                                                <p class="MCmsj">chao
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="MCstateDate">
+                                                            <div class="MCcontHourState">
+                                                                <span class="MCmsgHour">7:30 p. m.</span>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="MCbox MCinfo">
+                                        <div class="MCcontentBtn">
+                                            <button class="MCbtn MCinfoBtn">
+                                                <span class="MCbtnText">
+                                                    Cuadro de informacion
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="MCchat hideChat" id="chat1" data-element="1">
+                                    <div class="MCbox MCDates">
+                                        <div class="MCcontentBtn">
+                                            <button class="MCbtn MCdateBtn">
+                                                <span class="MCbtnText">
+                                                    ayer 15/08/22
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="MCbox MCmsgOut">
+                                        <div class="MCcontMsgOut">
+                                            <div class="MCcontentMsg MCtailOut">
+                                                <div class="MCcontTail-out">
+                                                    <span class="MCtail-out">
+                                                        <svg viewBox="0 0 8 13" width="8" height="13" class="">
+                                                            <path opacity=".13"
+                                                                d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z">
+                                                            </path>
+                                                            <path fill="currentColor"
+                                                                d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="MCboxInnerMsg">
+                                                    <span aria-label="nombre del emisor"></span>
+                                                    <div class="MCcontDateState">
+                                                        <div class="MCcontMsjText">
+                                                            <div class="MCmsjText">
+                                                                <p class="MCmsj">prueba
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -697,6 +647,213 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="MCchat hideChat" id="chat2" data-element="2">
+                                    <div class="MCbox MCDates">
+                                        <div class="MCcontentBtn">
+                                            <button class="MCbtn MCdateBtn">
+                                                <span class="MCbtnText">
+                                                    hoy 25/08/22
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="MCbox MCmsgOut">
+                                        <div class="MCcontMsgOut">
+                                            <div class="MCcontentMsg MCtailOut">
+                                                <div class="MCcontTail-out">
+                                                    <span class="MCtail-out">
+                                                        <svg viewBox="0 0 8 13" width="8" height="13" class="">
+                                                            <path opacity=".13"
+                                                                d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z">
+                                                            </path>
+                                                            <path fill="currentColor"
+                                                                d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="MCboxInnerMsg">
+                                                    <span aria-label="nombre del emisor"></span>
+                                                    <div class="MCcontDateState">
+                                                        <div class="MCcontMsjText">
+                                                            <div class="MCmsjText">
+                                                                <p class="MCmsj">texto texto
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="MCstateDate">
+                                                            <div class="MCcontHourState">
+                                                                <span class="MCmsgHour">7:31 p. m.</span>
+                                                                <div class="MCcheckStatus">
+                                                                    <span class="MCcheck MCchkBlue">
+                                                                        <svg viewBox="0 0 18 18" width="18" height="18"
+                                                                            class="">
+                                                                            <path fill="currentColor"
+                                                                                d="m17.394 5.035-.57-.444a.434.434 0 0 0-.609.076l-6.39 8.198a.38.38 0 0 1-.577.039l-.427-.388a.381.381 0 0 0-.578.038l-.451.576a.497.497 0 0 0 .043.645l1.575 1.51a.38.38 0 0 0 .577-.039l7.483-9.602a.436.436 0 0 0-.076-.609zm-4.892 0-.57-.444a.434.434 0 0 0-.609.076l-6.39 8.198a.38.38 0 0 1-.577.039l-2.614-2.556a.435.435 0 0 0-.614.007l-.505.516a.435.435 0 0 0 .007.614l3.887 3.8a.38.38 0 0 0 .577-.039l7.483-9.602a.435.435 0 0 0-.075-.609z">
+                                                                            </path>
+                                                                        </svg>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="MCbox MCmsgIn">
+                                        <div class="MCcontMsgIn">
+                                            <div class="MCcontentMsg MCtailIn">
+                                                <div class="MCcontTail-in">
+                                                    <span class="MCtail-in">
+                                                        <svg viewBox="0 0 8 13" width="8" height="13" class="">
+                                                            <path opacity=".13" fill="#0000000"
+                                                                d="M1.533 3.568 8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z">
+                                                            </path>
+                                                            <path fill="currentColor"
+                                                                d="M1.533 2.568 8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="MCboxInnerMsg">
+                                                    <span aria-label="nombre del receptor"></span>
+                                                    <div class="MCcontDateState">
+                                                        <div class="MCcontMsjText">
+                                                            <div class="MCmsjText">
+                                                                <p class="MCmsj">texto texto mensaje mensaje hola hola
+                                                                    hola hola hola hola hola texto texto mensaje mensaje
+                                                                    hola hola hola hola hola hola hola hola hola hola
+                                                                    hola
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="MCstateDate">
+                                                            <div class="MCcontHourState">
+                                                                <span class="MCmsgHour">7:30 p. m.</span>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="MCbox MCinfo">
+                                        <div class="MCcontentBtn">
+                                            <button class="MCbtn MCinfoBtn">
+                                                <span class="MCbtnText">
+                                                    Cuadro de informacion
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="MCchat hideChat" id="chat3" data-element="3">
+                                    <div class="MCbox MCDates">
+                                        <div class="MCcontentBtn">
+                                            <button class="MCbtn MCdateBtn">
+                                                <span class="MCbtnText">
+                                                    hoy 07/03/22
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="MCbox MCmsgOut">
+                                        <div class="MCcontMsgOut">
+                                            <div class="MCcontentMsg MCtailOut">
+                                                <div class="MCcontTail-out">
+                                                    <span class="MCtail-out">
+                                                        <svg viewBox="0 0 8 13" width="8" height="13" class="">
+                                                            <path opacity=".13"
+                                                                d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z">
+                                                            </path>
+                                                            <path fill="currentColor"
+                                                                d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="MCboxInnerMsg">
+                                                    <span aria-label="nombre del emisor"></span>
+                                                    <div class="MCcontDateState">
+                                                        <div class="MCcontMsjText">
+                                                            <div class="MCmsjText">
+                                                                <p class="MCmsj">tjajaajaaj
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="MCstateDate">
+                                                            <div class="MCcontHourState">
+                                                                <span class="MCmsgHour">01:54 p. m.</span>
+                                                                <div class="MCcheckStatus">
+                                                                    <span class="MCcheck MCchkBlue">
+                                                                        <svg viewBox="0 0 18 18" width="18" height="18"
+                                                                            class="">
+                                                                            <path fill="currentColor"
+                                                                                d="m17.394 5.035-.57-.444a.434.434 0 0 0-.609.076l-6.39 8.198a.38.38 0 0 1-.577.039l-.427-.388a.381.381 0 0 0-.578.038l-.451.576a.497.497 0 0 0 .043.645l1.575 1.51a.38.38 0 0 0 .577-.039l7.483-9.602a.436.436 0 0 0-.076-.609zm-4.892 0-.57-.444a.434.434 0 0 0-.609.076l-6.39 8.198a.38.38 0 0 1-.577.039l-2.614-2.556a.435.435 0 0 0-.614.007l-.505.516a.435.435 0 0 0 .007.614l3.887 3.8a.38.38 0 0 0 .577-.039l7.483-9.602a.435.435 0 0 0-.075-.609z">
+                                                                            </path>
+                                                                        </svg>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="MCbox MCmsgIn">
+                                        <div class="MCcontMsgIn">
+                                            <div class="MCcontentMsg MCtailIn">
+                                                <div class="MCcontTail-in">
+                                                    <span class="MCtail-in">
+                                                        <svg viewBox="0 0 8 13" width="8" height="13" class="">
+                                                            <path opacity=".13" fill="#0000000"
+                                                                d="M1.533 3.568 8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z">
+                                                            </path>
+                                                            <path fill="currentColor"
+                                                                d="M1.533 2.568 8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="MCboxInnerMsg">
+                                                    <span aria-label="nombre del receptor"></span>
+                                                    <div class="MCcontDateState">
+                                                        <div class="MCcontMsjText">
+                                                            <div class="MCmsjText">
+                                                                <p class="MCmsj">texto texto mensaje mensaje hola hola
+                                                                    hola hola hola hola hola texto texto mensaje mensaje
+                                                                    hola hola hola hola hola hola hola hola hola hola
+                                                                    hola
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="MCstateDate">
+                                                            <div class="MCcontHourState">
+                                                                <span class="MCmsgHour">7:30 p. m.</span>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="MCbox MCinfo">
+                                        <div class="MCcontentBtn">
+                                            <button class="MCbtn MCinfoBtn">
+                                                <span class="MCbtnText">
+                                                    Cuadro de informacion
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                         <div class="textChat">
