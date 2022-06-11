@@ -1280,6 +1280,63 @@ img {
     color: #e90c3b;
 }
 
+@media (min-width: 1024px) {
+    .boxWsp {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .headerChat {
+        justify-content: normal;
+    }
+
+    .BCcontContact {
+        display: flex;
+        width: 100%;
+    }
+
+    .BCcontHeader {
+        display: flex;
+        width: 100%;
+    }
+}
+
+.detailsChat .limitText {
+    max-width: 400px;
+}
+
+.contactActive {
+    flex-grow: unset;
+    width: 100%;
+}
+
+.BCtopHeader {
+    width: 100%;
+}
+
+.showTopHeader {
+    display: flex;
+}
+
+.hideTopHeader {
+    display: none;
+}
+
+.contactActive {
+    flex-grow: unset;
+}
+
+.headerChatIcons {
+    flex-grow: unset;
+    justify-content: normal;
+    width: auto;
+}
+
+.MCtailOut {
+    max-width: 360px;
+}
+}
 
 @media (min-width: 1200px) {
     .boxWsp {
