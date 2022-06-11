@@ -1291,51 +1291,46 @@ img {
         justify-content: normal;
     }
 
-    .BCcontContact {
-        display: flex;
-        width: 100%;
-    }
-
+    .BCcontContact,
     .BCcontHeader {
         display: flex;
         width: 100%;
     }
-}
 
-.detailsChat .limitText {
-    max-width: 400px;
-}
+    .detailsChat .limitText {
+        max-width: 400px;
+    }
 
-.contactActive {
-    flex-grow: unset;
-    width: 100%;
-}
+    .contactActive {
+        flex-grow: unset;
+        width: 100%;
+    }
 
-.BCtopHeader {
-    width: 100%;
-}
+    .BCtopHeader {
+        width: 100%;
+    }
 
-.showTopHeader {
-    display: flex;
-}
+    .showTopHeader {
+        display: flex;
+    }
 
-.hideTopHeader {
-    display: none;
-}
+    .hideTopHeader {
+        display: none;
+    }
 
-.contactActive {
-    flex-grow: unset;
-}
+    .contactActive {
+        flex-grow: unset;
+    }
 
-.headerChatIcons {
-    flex-grow: unset;
-    justify-content: normal;
-    width: auto;
-}
+    .headerChatIcons {
+        flex-grow: unset;
+        justify-content: normal;
+        width: auto;
+    }
 
-.MCtailOut {
-    max-width: 360px;
-}
+    .MCtailOut {
+        max-width: 360px;
+    }
 }
 
 @media (min-width: 1200px) {
