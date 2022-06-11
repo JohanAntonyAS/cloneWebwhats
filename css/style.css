@@ -442,6 +442,8 @@ img {
 }
 
 .listaChat {
+    display: none;
+    /*quitar luego*/
     position: absolute;
     left: -38px;
     bottom: -124px;
