@@ -20,8 +20,9 @@ function OnInput(e) {
     this.style.height = (this.scrollHeight) + 'px';
 }
 
-//cambio de chats
 
+//cambio de chats
+/*
 $(document).ready(function () {
     // click on a user select, change chat and messages
     $('.contact').click(function () {
@@ -45,4 +46,4 @@ function changeChat(userSelect) {
         chat.removeClass('hideChat').addClass('ShowChat');
         chatSelect.removeClass('ShowChat').addClass('hideChat');
     }
-}
+}*/

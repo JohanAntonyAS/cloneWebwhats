@@ -89,12 +89,13 @@
                         </header>
                         <span class="divide"></span>
                         <div class="searchBox">
-                            <input class="searchInput" placeholder="Busca un chat o inicia uno nuevo" type="text">
+                            <input id="search" class="searchInput" autocomplete="off"
+                                placeholder="Busca un chat o inicia uno nuevo" type="text">
                         </div>
                         <div class="tabIndex">
-
                             <div class="chatList">
-                                <div class="contact activeContact" id="contact0" data-element="0">
+
+                                <div class="contact activeContact" data-element="0">
                                     <div class="pictureContact">
                                         <div class="pictureContent">
                                             <img src="resources/img/users/bob.jpg" alt="">
@@ -103,7 +104,7 @@
                                     <div class="resumeContact">
                                         <div class="flex">
                                             <div class="containerText">
-                                                <p class="nameContact textOverflow">noe</p>
+                                                <p class="nameContact textOverflow">noe123</p>
                                             </div>
                                             <div class="containerText">
                                                 <span class="contactHour"> 23/5/2022</span>
@@ -115,7 +116,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="contact notActiveContact" id="contact1" data-element="1">
+                                <div class="contact notActiveContact" data-element="1">
                                     <div class="pictureContact">
                                         <div class="pictureContent">
                                             <img src="resources/img/users/bob.jpg" alt="">
@@ -138,7 +139,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="contact notActiveContact" id="contact2" data-element="2">
+                                <div class="contact notActiveContact" data-element="2">
                                     <div class="pictureContact">
                                         <div class="pictureContent">
                                             <img src="resources/img/users/bob.jpg" alt="">
@@ -161,7 +162,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="contact notActiveContact" id="contact3" data-element="3">
+                                <div class="contact notActiveContact" data-element="3">
                                     <div class="pictureContact">
                                         <div class="pictureContent">
                                             <img src="resources/img/users/bob.jpg" alt="">
@@ -205,7 +206,7 @@
                                                     <p class="textOverflow limitText one">noe</p>
                                                 </div>
                                                 <div class="flex">
-                                                    <p class="textOverflow limitText two">arca</p>
+                                                    <p class="textOverflow limitText two">últ. vez hoy a la(s) <span></span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -474,7 +475,8 @@
                                                     <div class="MCcontDateState">
                                                         <div class="MCcontMsjText">
                                                             <div class="MCmsjText">
-                                                                <p class="MCmsj">hola
+                                                                <p class="MCmsj">hola <br>
+                                                                    data
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -532,7 +534,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="MCbox MCinfo">
                                         <div class="MCcontentBtn">
@@ -880,7 +881,7 @@
                                             <textarea rows="1" name="message" class="tcText" id="message"></textarea>
                                         </div>
                                     </div>
-                                    <div class="tcGrowTwo">
+                                    <div id="send" class="tcGrowTwo">
                                         <button class="contArrowSend">
                                             <span class="arrowSend">
                                                 <svg viewBox="0 0 24 24" width="24" height="24" class="">
@@ -1193,8 +1194,86 @@
             </div>
         </div>
     </main>
+    <div class="template">
+        <div class="MCbox MCmsgOut">
+            <div class="MCcontMsgOut">
+                <div class="MCcontentMsg MCtailOut">
+                    <div class="MCcontTail-out">
+                        <span class="MCtail-out">
+                            <svg viewBox="0 0 8 13" width="8" height="13" class="">
+                                <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z">
+                                </path>
+                                <path fill="currentColor"
+                                    d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z">
+                                </path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="MCboxInnerMsg">
+                        <span aria-label="nombre del emisor"></span>
+                        <div class="MCcontDateState">
+                            <div class="MCcontMsjText">
+                                <div class="MCmsjText">
+                                    <p class="MCmsj"></p>
+                                </div>
+                            </div>
+                            <div class="MCstateDate">
+                                <div class="MCcontHourState">
+                                    <span class="MCmsgHour">7:30 p. m.</span>
+                                    <div class="MCcheckStatus">
+                                        <span class="MCcheck">
+                                            <svg viewBox="0 0 18 18" width="18" height="18" class="">
+                                                <path fill="currentColor"
+                                                    d="m17.394 5.035-.57-.444a.434.434 0 0 0-.609.076l-6.39 8.198a.38.38 0 0 1-.577.039l-.427-.388a.381.381 0 0 0-.578.038l-.451.576a.497.497 0 0 0 .043.645l1.575 1.51a.38.38 0 0 0 .577-.039l7.483-9.602a.436.436 0 0 0-.076-.609zm-4.892 0-.57-.444a.434.434 0 0 0-.609.076l-6.39 8.198a.38.38 0 0 1-.577.039l-2.614-2.556a.435.435 0 0 0-.614.007l-.505.516a.435.435 0 0 0 .007.614l3.887 3.8a.38.38 0 0 0 .577-.039l7.483-9.602a.435.435 0 0 0-.075-.609z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="MCbox MCmsgIn">
+            <div class="MCcontMsgIn">
+                <div class="MCcontentMsg MCtailIn">
+                    <div class="MCcontTail-in">
+                        <span class="MCtail-in">
+                            <svg viewBox="0 0 8 13" width="8" height="13" class="">
+                                <path opacity=".13" fill="#0000000"
+                                    d="M1.533 3.568 8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z">
+                                </path>
+                                <path fill="currentColor"
+                                    d="M1.533 2.568 8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z">
+                                </path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="MCboxInnerMsg">
+                        <span aria-label="nombre del receptor"></span>
+                        <div class="MCcontDateState">
+                            <div class="MCcontMsjText">
+                                <div class="MCmsjText">
+                                    <p class="MCmsj">chao
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="MCstateDate">
+                                <div class="MCcontHourState">
+                                    <span class="MCmsgHour">7:30 p. m.</span>
 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/script-front.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -45,6 +45,10 @@ img {
     -ms-user-select: none;
 }
 
+.template {
+    display: none;
+}
+
 ::-webkit-scrollbar {
     width: 6px !important;
     height: 6px !important;
