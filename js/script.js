@@ -20,27 +20,17 @@ $(document).ready(function () {
 
     // click on a user select, change chat and messages
     $('.contact').click(function () {
+        console.log($(this));
         changeChat($(this));
     });
 
-});
+    // click on show info chat
+    $('.contactActive').click(function () {
+        showInfo();
+    });
 
-function changeChat(userSelect) {
-    var contactSelect = $('.contact.activeContact');
-    var dataElement = userSelect.attr('data-element');
-    var info = $(".BCtopHeader[data-element='" + dataElement + "']");
-    var infoSelect = $('.BCtopHeader.showTopHeader');
-    var chat = $(".MCchat[data-element='" + dataElement + "']");
-    var chatSelect = $('.MCchat.ShowChat');
-    if (!userSelect.hasClass('activeContact')) {
-        userSelect.removeClass('notActiveContact').addClass('activeContact');
-        contactSelect.removeClass('activeContact').addClass('notActiveContact');
-        info.removeClass('hideTopHeader').addClass('showTopHeader');
-        infoSelect.removeClass('showTopHeader').addClass('hideTopHeader');
-        chat.removeClass('hideChat').addClass('ShowChat');
-        chatSelect.removeClass('ShowChat').addClass('hideChat');
-    }
-}
+    
+});
 
 // function search
 function search() {
@@ -66,17 +56,12 @@ function send() {
     var info = $('.BCtopHeader.showTopHeader');
     var date = new Date;
     var time = addZero(date.getHours()) + ':' + addZero(date.getMinutes());
-    
-    if(text.includes('\n')){
-        console.log("salgo de linea");
-        text.replaceAll('\n','<br/>');
-    }
 
     console.log(text);
 
     if (text !== '') {
 
-        bubble.find('p').html(text);
+        bubble.find('span.MCmsj').html(text);
         bubble.find('span.MCmsgHour').text(time);
         chat.append(bubble);
         contact.prependTo('.chatList');
@@ -105,7 +90,7 @@ function receive() {
     var date = new Date;
     var time = addZero(date.getHours()) + ':' + addZero(date.getMinutes());
     
-    bubble.find('p').text(textIndex);
+    bubble.find('span.MCmsj').html(textIndex);
     bubble.find('span.MCmsgHour').text(time);
     chat.append(bubble);
     scrollBottom();
@@ -140,4 +125,22 @@ function getRandomIntInclusive(min, max) {
 function messageAudio(sent) {
     const snd = new Audio(sent);
     return snd.play();
+}
+
+function changeChat(userSelect) {
+
+    var contactSelect = $('.contact.activeContact');
+    var dataElement = userSelect.attr('data-element');
+    var info = $(".BCtopHeader[data-element='" + dataElement + "']");
+    var infoSelect = $('.BCtopHeader.showTopHeader');
+    var chat = $(".MCchat[data-element='" + dataElement + "']");
+    var chatSelect = $('.MCchat.ShowChat');
+    if (!userSelect.hasClass('activeContact')) {
+        userSelect.removeClass('notActiveContact').addClass('activeContact');
+        contactSelect.removeClass('activeContact').addClass('notActiveContact');
+        info.removeClass('hideTopHeader').addClass('showTopHeader');
+        infoSelect.removeClass('showTopHeader').addClass('hideTopHeader');
+        chat.removeClass('hideChat').addClass('ShowChat');
+        chatSelect.removeClass('ShowChat').addClass('hideChat');
+    }
 }
