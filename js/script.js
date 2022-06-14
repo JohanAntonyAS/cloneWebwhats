@@ -57,7 +57,7 @@ function send() {
     var date = new Date;
     var time = addZero(date.getHours()) + ':' + addZero(date.getMinutes());
 
-    console.log(text);
+    console.log(contact);
 
     if (text !== '') {
 
@@ -71,7 +71,7 @@ function send() {
         } else {
             contact.find('p.resumeChat').text(text);
         }
-        contact.children('span.contactHour').text(time);
+        contact.find('span.contactHour').text(time);
         info.find('span').text(time);
         $("#message").val("");
 
@@ -143,4 +143,55 @@ function changeChat(userSelect) {
         chat.removeClass('hideChat').addClass('ShowChat');
         chatSelect.removeClass('ShowChat').addClass('hideChat');
     }
+}
+
+function create_new() {
+
+    let element = localStorage.getItem('element');
+    console.log(element);
+    if (element === null) {
+        element = 10;
+    } else {
+        element++;
+    }
+    new_contact(element);
+    new_topbar(element);
+    new_chat(element);
+
+    localStorage.setItem("element", element);
+}
+
+
+function new_contact(element) {
+
+    var chatlist = $('.chatList');
+    var contact = $('.template .contact.notActiveContact').clone();
+    contact.attr("data-element", element);
+    //contact.find('img').attr("src","url_image");
+    contact.find('.nameContact').html("Kevin Arnold");
+    contact.find('span.contactHour').html("23/5/2022");
+    contact.find('p.resumeChat').html("resumen chat");
+
+    chatlist.append(contact);
+}
+
+function new_topbar(element) {
+
+    var topbar_list = $('#top_bar');
+    var top_bar = $('.template .BCtopHeader').clone();
+    top_bar.attr("data-element", element);
+    //top_bar.find('img').attr("src","url_image");
+    top_bar.find('p.one').html("Kevin Arnold");
+    top_bar.find('span').html('23/5/2022'); //ultima conexion
+
+    topbar_list.append(top_bar);
+}
+
+function new_chat(element) {
+
+    var chat_list = $('.MCcontentChat');
+    var chat = $('.template .MCchat').clone();
+    chat.attr("data-element", element);
+
+    chat_list.append(chat);
 }
