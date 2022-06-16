@@ -20,27 +20,17 @@ $(document).ready(function () {
 
     // click on a user select, change chat and messages
     $('.contact').click(function () {
+        console.log($(this));
         changeChat($(this));
     });
 
-});
+    // click on show info chat
+    $('.contactActive').click(function () {
+        showInfo();
+    });
 
-function changeChat(userSelect) {
-    var contactSelect = $('.contact.activeContact');
-    var dataElement = userSelect.attr('data-element');
-    var info = $(".BCtopHeader[data-element='" + dataElement + "']");
-    var infoSelect = $('.BCtopHeader.showTopHeader');
-    var chat = $(".MCchat[data-element='" + dataElement + "']");
-    var chatSelect = $('.MCchat.ShowChat');
-    if (!userSelect.hasClass('activeContact')) {
-        userSelect.removeClass('notActiveContact').addClass('activeContact');
-        contactSelect.removeClass('activeContact').addClass('notActiveContact');
-        info.removeClass('hideTopHeader').addClass('showTopHeader');
-        infoSelect.removeClass('showTopHeader').addClass('hideTopHeader');
-        chat.removeClass('hideChat').addClass('ShowChat');
-        chatSelect.removeClass('ShowChat').addClass('hideChat');
-    }
-}
+    
+});
 
 // function search
 function search() {
@@ -66,17 +56,12 @@ function send() {
     var info = $('.BCtopHeader.showTopHeader');
     var date = new Date;
     var time = addZero(date.getHours()) + ':' + addZero(date.getMinutes());
-    
-    if(text.includes('\n')){
-        console.log("salgo de linea");
-        text.replaceAll('\n','<br/>');
-    }
 
-    console.log(text);
+    console.log(contact);
 
     if (text !== '') {
 
-        bubble.find('p').html(text);
+        bubble.find('span.MCmsj').html(text);
         bubble.find('span.MCmsgHour').text(time);
         chat.append(bubble);
         contact.prependTo('.chatList');
@@ -86,7 +71,7 @@ function send() {
         } else {
             contact.find('p.resumeChat').text(text);
         }
-        contact.children('span.contactHour').text(time);
+        contact.find('span.contactHour').text(time);
         info.find('span').text(time);
         $("#message").val("");
 
@@ -105,7 +90,7 @@ function receive() {
     var date = new Date;
     var time = addZero(date.getHours()) + ':' + addZero(date.getMinutes());
     
-    bubble.find('p').text(textIndex);
+    bubble.find('span.MCmsj').html(textIndex);
     bubble.find('span.MCmsgHour').text(time);
     chat.append(bubble);
     scrollBottom();
@@ -140,4 +125,73 @@ function getRandomIntInclusive(min, max) {
 function messageAudio(sent) {
     const snd = new Audio(sent);
     return snd.play();
+}
+
+function changeChat(userSelect) {
+
+    var contactSelect = $('.contact.activeContact');
+    var dataElement = userSelect.attr('data-element');
+    var info = $(".BCtopHeader[data-element='" + dataElement + "']");
+    var infoSelect = $('.BCtopHeader.showTopHeader');
+    var chat = $(".MCchat[data-element='" + dataElement + "']");
+    var chatSelect = $('.MCchat.ShowChat');
+    if (!userSelect.hasClass('activeContact')) {
+        userSelect.removeClass('notActiveContact').addClass('activeContact');
+        contactSelect.removeClass('activeContact').addClass('notActiveContact');
+        info.removeClass('hideTopHeader').addClass('showTopHeader');
+        infoSelect.removeClass('showTopHeader').addClass('hideTopHeader');
+        chat.removeClass('hideChat').addClass('ShowChat');
+        chatSelect.removeClass('ShowChat').addClass('hideChat');
+    }
+}
+
+function create_new() {
+
+    let element = localStorage.getItem('element');
+    console.log(element);
+    if (element === null) {
+        element = 10;
+    } else {
+        element++;
+    }
+    new_contact(element);
+    new_topbar(element);
+    new_chat(element);
+
+    localStorage.setItem("element", element);
+}
+
+
+function new_contact(element) {
+
+    var chatlist = $('.chatList');
+    var contact = $('.template .contact.notActiveContact').clone();
+    contact.attr("data-element", element);
+    //contact.find('img').attr("src","url_image");
+    contact.find('.nameContact').html("Kevin Arnold");
+    contact.find('span.contactHour').html("23/5/2022");
+    contact.find('p.resumeChat').html("resumen chat");
+
+    chatlist.append(contact);
+}
+
+function new_topbar(element) {
+
+    var topbar_list = $('#top_bar');
+    var top_bar = $('.template .BCtopHeader').clone();
+    top_bar.attr("data-element", element);
+    //top_bar.find('img').attr("src","url_image");
+    top_bar.find('p.one').html("Kevin Arnold");
+    top_bar.find('span').html('23/5/2022'); //ultima conexion
+
+    topbar_list.append(top_bar);
+}
+
+function new_chat(element) {
+
+    var chat_list = $('.MCcontentChat');
+    var chat = $('.template .MCchat').clone();
+    chat.attr("data-element", element);
+
+    chat_list.append(chat);
 }

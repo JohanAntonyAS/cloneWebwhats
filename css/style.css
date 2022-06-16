@@ -18,7 +18,8 @@ a {
 
 p,
 span,
-textarea {
+textarea,
+label {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -775,6 +776,7 @@ img {
     border: none;
     padding: 20px 0;
     flex-grow: 1;
+    max-height: 60px;
 }
 
 .iconInfo {
@@ -806,7 +808,8 @@ img {
     width: 100%;
 }
 
-.descripcionInfo {
+.descripcionInfo,
+.BIforms {
     flex-grow: 9;
     overflow-y: scroll;
 }
@@ -1282,8 +1285,72 @@ img {
 .ISTcard span {
     width: 100%;
     display: flex;
-    color: #e90c3b;
+    color: #00A884;
 }
+
+.formCont {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    padding: 20px 30px;
+    background-color: #fff;
+}
+
+.frmLabel {
+    display: block;
+    font-size: 1em;
+    margin: 10px 0 5px;
+}
+
+.frmInput {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #667781;
+    margin: 0px 0 10px;
+    outline: none;
+    font-size: 0.9em;
+    padding: 6px 0 6px;
+}
+
+.frmInput:focus {
+    border-bottom: 2px solid #00a884;
+}
+
+.frmSubmit {
+    margin-top: 15px;
+    padding: 10px 24px;
+    border-radius: 3px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.buttonSecundary {
+    background-color: #fff;
+    color: #008069;
+    border: 1px solid #008069;
+}
+
+.buttonSecundary:hover {
+    background-color: #f0f1f1;
+}
+
+.buttonSecundary:hover,
+.buttonPrimary:hover {
+    box-shadow: 0px 2px 7px rgba(11, 20, 26, 0.09), 0px 1px 2px rgba(11, 20, 26, 0.05);
+}
+
+.buttonPrimary {
+    background-color: #008069;
+    color: #fff;
+    border: none;
+}
+
+.buttonPrimary:hover {
+    background-color: #017561;
+}
+
+
 
 @media (min-width: 1024px) {
     .boxWsp {

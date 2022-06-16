@@ -9,7 +9,7 @@ function showInfo() {
 }
 
 // textArea AutoResize
-let tx = document.getElementsByTagName('textarea');
+let tx = document.getElementById('message');
 for (let i = 0; i < tx.length; i++) {
     tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight) + 'px;overflow-y:hidden;');
     tx[i].addEventListener("input", OnInput, false);
