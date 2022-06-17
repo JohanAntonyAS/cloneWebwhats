@@ -19,31 +19,3 @@ function OnInput(e) {
     this.style.height = 'auto';
     this.style.height = (this.scrollHeight) + 'px';
 }
-
-
-//cambio de chats
-/*
-$(document).ready(function () {
-    // click on a user select, change chat and messages
-    $('.contact').click(function () {
-        changeChat($(this));
-    });
-
-});
-
-function changeChat(userSelect) {
-    var contactSelect = $('.contact.activeContact');
-    var dataElement = userSelect.attr('data-element');
-    var info = $(".BCtopHeader[data-element='" + dataElement + "']");
-    var infoSelect = $('.BCtopHeader.showTopHeader');
-    var chat = $(".MCchat[data-element='" + dataElement + "']");
-    var chatSelect = $('.MCchat.ShowChat');
-    if (!userSelect.hasClass('activeContact')) {
-        userSelect.removeClass('notActiveContact').addClass('activeContact');
-        contactSelect.removeClass('activeContact').addClass('notActiveContact');
-        info.removeClass('hideTopHeader').addClass('showTopHeader');
-        infoSelect.removeClass('showTopHeader').addClass('hideTopHeader');
-        chat.removeClass('hideChat').addClass('ShowChat');
-        chatSelect.removeClass('ShowChat').addClass('hideChat');
-    }
-}*/

@@ -1289,6 +1289,7 @@ img {
 }
 
 .formCont {
+    position: relative;
     display: flex;
     height: 100%;
     width: 100%;
@@ -1301,16 +1302,22 @@ img {
     display: block;
     font-size: 1em;
     margin: 10px 0 5px;
+    color: #111b21;
 }
 
 .frmInput {
     width: 100%;
     border: none;
-    border-bottom: 2px solid #667781;
-    margin: 0px 0 10px;
+    border-bottom: 2px solid #00a884;
+    margin: 0px 0 15px;
     outline: none;
     font-size: 0.9em;
     padding: 6px 0 6px;
+}
+
+.frmInput::placeholder {
+    opacity: 0;
+    color: #575757;
 }
 
 .frmInput:focus {

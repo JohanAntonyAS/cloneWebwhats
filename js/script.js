@@ -29,7 +29,6 @@ $(document).ready(function () {
         showInfo();
     });
 
-    
 });
 
 // function search
@@ -89,7 +88,7 @@ function receive() {
     var contact = $('.contact.activeContact');
     var date = new Date;
     var time = addZero(date.getHours()) + ':' + addZero(date.getMinutes());
-    
+
     bubble.find('span.MCmsj').html(textIndex);
     bubble.find('span.MCmsgHour').text(time);
     chat.append(bubble);
@@ -195,3 +194,46 @@ function new_chat(element) {
 
     chat_list.append(chat);
 }
+
+
+//select2 data
+var Select2 = function () {
+    //== Private functions
+    var optionSelect = function () {
+        // loading data from array
+        var data = [{
+            id: 0,
+            text: 'Enhancement'
+        }, {
+            id: 1,
+            text: 'Bug'
+        }, {
+            id: 2,
+            text: 'Duplicate'
+        }, {
+            id: 3,
+            text: 'Invalid'
+        }, {
+            id: 4,
+            text: 'Wontfix'
+        }];
+
+        $('#m_select2_5').select2({
+            placeholder: "Seleciona algo",
+            data: data
+        });
+
+    }
+
+    //== Public functions
+    return {
+        init: function () {
+            optionSelect();
+        }
+    };
+}();
+
+//== Initialization
+jQuery(document).ready(function () {
+    Select2.init();
+});
