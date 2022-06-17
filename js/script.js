@@ -5,7 +5,6 @@ $(document).ready(function () {
         search();
     });
 
-
     // send message and get random reply after seconds
     $('#send').click(function () {
         send();
@@ -15,6 +14,7 @@ $(document).ready(function () {
     $('#message').keydown(function () {
         if (event.which === 13 && !event.shiftKey) {
             send();
+            $("#chat0").animate({ scrollTop: $('#chat0').prop("scrollHeight") }, 1000);
         }
     });
 
@@ -93,6 +93,7 @@ function receive() {
     bubble.find('span.MCmsgHour').text(time);
     chat.append(bubble);
     scrollBottom();
+    $("#chat0").animate({ scrollTop: $('#chat0').prop("scrollHeight") }, 1000);
     if (textIndex.length > 14) {
         contact.find('p.resumeChat').text(textIndex.substring(0, 14) + ' [...]');
     } else {
