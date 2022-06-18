@@ -14,7 +14,6 @@ $(document).ready(function () {
     $('#message').keydown(function () {
         if (event.which === 13 && !event.shiftKey) {
             send();
-            $("#chat0").animate({ scrollTop: $('#chat0').prop("scrollHeight") }, 1000);
         }
     });
 
@@ -31,6 +30,14 @@ $(document).ready(function () {
 
 });
 
+function scrollBottom(){
+    let chats = document.querySelectorAll('.MCchat');
+    
+    for (let index = 0; index < chats.length-1; index++) {
+        $(".MCchat[data-element='"+chats[index].dataset.element+"']").animate({ scrollTop: $(".MCchat[data-element='"+chats[index].dataset.element+"']").prop("scrollHeight") }, 1000);
+    }
+}
+
 // function search
 function search() {
     var search = $('#search').val().toLowerCase();
@@ -46,7 +53,7 @@ function search() {
 }
 
 function send() {
-
+    console.log("send");
     //var text = $('#message').val();
     var text = document.getElementById("message").value;
     var chat = $('.MCchat.ShowChat');
@@ -110,10 +117,11 @@ function addZero(number) {
     return number;
 }
 
+/*
 function scrollBottom() {
     var chatHeight = $('.MCchat.ShowChat').height();
     $('.MCcontentChat').scrollTop(chatHeight);
-}
+}*/
 
 
 function getRandomIntInclusive(min, max) {
