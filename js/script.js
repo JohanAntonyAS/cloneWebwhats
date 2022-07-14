@@ -8,12 +8,16 @@ $(document).ready(function () {
     // send message and get random reply after seconds
     $('#send').click(function () {
         send();
+        console.log("mirame send x2")
+        $("#message").val("")
     });
 
     // send message but enter
     $('#message').keydown(function () {
         if (event.which === 13 && !event.shiftKey) {
             send();
+            console.log("mirame send xd")
+            $("#message").val("")
         }
     });
 
@@ -24,17 +28,17 @@ $(document).ready(function () {
     });
 
     // click on show info chat
-    $('.contactActive').click(function () {
-        showInfo();
-    });
+    // $('.contactActive').click(function () {
+    //     showInfo();
+    // });
 
 });
 
-function scrollBottom(){
+function scrollBottom() {
     let chats = document.querySelectorAll('.MCchat');
-    
-    for (let index = 0; index < chats.length-1; index++) {
-        $(".MCchat[data-element='"+chats[index].dataset.element+"']").animate({ scrollTop: $(".MCchat[data-element='"+chats[index].dataset.element+"']").prop("scrollHeight") }, 1000);
+
+    for (let index = 0; index < chats.length - 1; index++) {
+        $(".MCchat[data-element='" + chats[index].dataset.element + "']").animate({ scrollTop: $(".MCchat[data-element='" + chats[index].dataset.element + "']").prop("scrollHeight") }, 100);
     }
 }
 
@@ -53,8 +57,8 @@ function search() {
 }
 
 function send() {
-    console.log("send");
-    //var text = $('#message').val();
+    // console.log("send");
+    // var text = $('#message').val();
     var text = document.getElementById("message").value;
     var chat = $('.MCchat.ShowChat');
     var bubble = $('.template .MCbox.MCmsgOut').clone();
@@ -63,9 +67,9 @@ function send() {
     var date = new Date;
     var time = addZero(date.getHours()) + ':' + addZero(date.getMinutes());
 
-    console.log(contact);
+    // console.log(contact);
 
-    if (text !== '') {
+    if (text !== ' ') {
 
         bubble.find('span.MCmsj').html(text);
         bubble.find('span.MCmsgHour').text(time);
@@ -79,13 +83,15 @@ function send() {
         }
         contact.find('span.contactHour').text(time);
         info.find('span').text(time);
-        $("#message").val("");
+
+
+        $("#message").val("")
+
 
         messageAudio("./audio/sent.wav");
         setTimeout(receive, 3000);
     }
 }
-
 
 function receive() {
     var text = ['Si seguro.', '¡Estoy de camino!', 'Nos vemos.', '¿De qué estás hablando?', '¡Esto es increíble!', 'Lo siento, estoy ocupado mañana...', 'No me importa.'];
@@ -99,13 +105,13 @@ function receive() {
     bubble.find('span.MCmsj').html(textIndex);
     bubble.find('span.MCmsgHour').text(time);
     chat.append(bubble);
-    scrollBottom();
-    $("#chat0").animate({ scrollTop: $('#chat0').prop("scrollHeight") }, 1000);
+
     if (textIndex.length > 14) {
         contact.find('p.resumeChat').text(textIndex.substring(0, 14) + ' [...]');
     } else {
         contact.find('p.resumeChat').text(textIndex);
     }
+    scrollBottom();
     messageAudio("./audio/recived.wav");
 }
 
