@@ -109,10 +109,10 @@ button::-moz-focus-inner {
     border-style: none
 }
 
-textarea {
+/* textarea {
     overflow: auto;
     resize: vertical
-}
+} */
 
 [type=search] {
     outline-offset: -2px;

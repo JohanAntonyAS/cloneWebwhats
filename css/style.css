@@ -57,6 +57,12 @@ button {
     -webkit-appearance: none;
 }
 
+
+textarea.resize {
+    overflow: auto;
+    resize: vertical;
+}
+
 .animate__animated.animate__fasterx3 {
     -webkit-animation-duration: .33s;
     animation-duration: .33s;
