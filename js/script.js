@@ -256,7 +256,6 @@ jQuery(document).ready(function () {
     Select2.init();
 });
 
-//test
 
 //dualSelectBox
 var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox({
