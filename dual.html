@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-duallistbox.css">
+    <script src="js/jquery.bootstrap-duallistbox.js"></script>
+</head>
+<style>
+    .moveall,
+    .removeall {
+        border: 1px solid #ccc !important;
+    }
+
+    .moveall,
+    .removeall:hover {
+        background: #efefef;
+    }
+
+    /* // Only included because button labels aren't showing  */
+
+    .moveall::after {
+        content: attr(title);
+
+    }
+
+    .removeall::after {
+        content: attr(title);
+    }
+
+    /* Custom styling form */
+    .form-control option {
+        padding: 10px;
+        border-bottom: 1px solid #efefef;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="row" style="margin-top: 40px;">
+            <div class="col">
+                <!-- <button class="btn btn-primary float-right">Add payees</button> -->
+
+                <h2> Nuevo Mensaje </h2>
+                <p><strong>Numeros:</strong> Especifica los numeros de telefono al cual se enviara el mensaje</p>
+                <!-- <hr /> -->
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 40px;">
+            <div class="col">
+                <form id="demoform">
+                    <select multiple="multiple" size="10" name="duallistbox_demo1[]" title="duallistbox_demo1[]">
+                        <option value="payee1">Aviva Insurance - Business - 987654</option>
+                        <option value="payee2">Bell Mobility - 66853 (John Smith)</option>
+                        <option value="payee3">Bell Mobility - 75432 (Jane Smith)</option>
+                        <option value="payee4">Bell Mobility - 98765 (Jim Smith)</option>
+                        <option value="payee5">Canadian Tire Commercial Mastercard - **** 5525</option>
+                        <option value="payee6">Canadian Tire Mastercard - **** 3158 (President's Card)</option>
+                        <option value="payee7">FedEx Express Canada - 54321</option>
+                        <option value="payee8">Lowes Canada - 12345</option>
+                        <option value="payee9">Mastercard, PC Financial - **** 5535</option>
+                        <option value="payee10">Qtrade Investor - 12345</option>
+                        <option value="payee11" selected="selected">Servus Mastercard - **** 5545</option>
+                        <option value="payee12">Telus - 123456787 (Calagary Office)</option>
+                        <option value="payee13">Telus - 123456788 (Edmonton NW Office)</option>
+                        <option value="payee14">Telus - 123456789 (Edmonton SE Office)</option>
+                    </select>
+                    <br>
+                    <div class="row" style="margin: 30px 0px;">
+                        <div class="col-md-6">
+                            <h5>mensaje</h5>
+                            <p>ingrese un mensaje</p>
+                        </div>
+                        <div class="col-md-6">
+                            <textarea name="" id="" class="w-100" rows="6"></textarea>
+                        </div>
+                    </div>
+                    <div class="row" style="margin: 30px 0px;">
+                        <div class="col-md-6">
+                            <h5>imagen</h5>
+                            <p>seleccionar imagen</p>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="file" name="file" class="w-100" multiple id="">
+                        </div>
+                    </div>
+                    <div class="row" style="margin: 30px 0px;">
+                        <div class="col-md-6">
+                            <h5>caption</h5>
+                            <p>ingrese caption</p>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="file" class="w-100" id="">
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin: 30px 14px;">
+                        <h5>tipo de envio</h5>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>solo a los que nunca contactaste</option>
+                            <option>a los que contactaste pero no te respondieron</option>
+                            <option>a los que contactaste y te respondieron</option>
+                            <option>solo a tus contactos</option>
+                            <option>a todos sin excepcion</option>
+                        </select>
+                    </div>
+
+                    <div class="row" style="margin: 30px 0px;">
+                        <div class="col-md-3 offset-9">
+                            <button type="submit" class="btn btn-primary w-100">Pagar (#)</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox({
+            // nonSelectedListLabel: 'Available Payees',
+            // selectedListLabel: 'Selected Payees',
+            preserveSelectionOnMove: 'moved',
+            moveAllLabel: 'Mover todos',
+            removeAllLabel: 'Remover todos',
+            filterPlaceHolder: 'Filtrar',
+            infoText: 'Mostrando todo {0}',
+            infoTextFiltered: '<span class="label label-warning">Filtrado</span> {0} de {1}',
+            infoTextEmpty: 'Lista vacia',
+        });
+        $("#demoform").submit(function () {
+            alert($('[name="duallistbox_demo1[]"]').val());
+            return false;
+        });
+    </script>
+</body>
+
+</html>
