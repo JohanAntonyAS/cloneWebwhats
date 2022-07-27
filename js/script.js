@@ -240,6 +240,10 @@ var Select2 = function () {
             placeholder: "Seleciona algo",
             data: data
         });
+        $('#m_select2_6').select2({
+            placeholder: "Seleciona algo",
+            data: data
+        });
 
     }
 

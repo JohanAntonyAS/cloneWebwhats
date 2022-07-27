@@ -204,8 +204,10 @@ h5 {
     margin-left: -15px
 }
 
-.col,
-.col-md-6 {
+.col
+
+/* ,.col-md-6  */
+    {
     position: relative;
     width: 100%;
     min-height: 1px;
@@ -250,12 +252,12 @@ h5 {
 
 @media (min-width:768px) {
 
-    .col-md-6 {
+    /* .col-md-6 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
         max-width: 50%
-    }
+    } */
 
     .order-md-6 {
         -webkit-box-ordinal-group: 7;
@@ -278,7 +280,7 @@ h5 {
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
-    border-radius: .25rem;
+    border-radius: 0px;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
 
@@ -290,9 +292,9 @@ h5 {
 .form-control:focus {
     color: #495057;
     background-color: #fff;
-    border-color: #80bdff;
+    /* border-color: #80bdff; */
     outline: 0;
-    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+    /* box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25) */
 }
 
 .form-control::-webkit-input-placeholder {
@@ -668,7 +670,7 @@ select.form-control-lg:not([size]):not([multiple]) {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    border: 1px solid transparent;
+    /* border: 1px solid transparent; */
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -681,11 +683,11 @@ select.form-control-lg:not([size]):not([multiple]) {
     text-decoration: none
 }
 
-.btn.focus,
+/* .btn.focus,
 .btn:focus {
     outline: 0;
     box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
-}
+} */
 
 .btn.disabled,
 .btn:disabled {

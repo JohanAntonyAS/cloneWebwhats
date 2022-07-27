@@ -378,7 +378,7 @@
         '   </span>' +
         '   <input class="filter" type="text">' +
         '   <div class="btn-group buttons">' +
-        '     <button type="button" class="btn moveall">' +
+        '     <button type="button" class="btn moveall buttonSecundary">' +
         '       <i></i>' +
         '       <i></i>' +
         '     </button>' +
@@ -399,7 +399,7 @@
         '     <button type="button" class="btn remove">' +
         '       <i></i>' +
         '     </button>' +
-        '     <button type="button" class="btn removeall">' +
+        '     <button type="button" class="btn removeall buttonSecundary">' +
         '       <i></i>' +
         '       <i></i>' +
         '     </button>' +
@@ -846,9 +846,11 @@
 
 window.onload = function () {
   let $dualbx = document.querySelector('#demoform .bootstrap-duallistbox-container')
+  let $dualbx2 = document.querySelector('#demoform2 .bootstrap-duallistbox-container')
   let $bx1 = document.querySelector('.box1')
   let $bx2 = document.querySelector('.box2')
   $dualbx.classList.remove('row')
+  $dualbx2.classList.remove('row')
   $bx1.classList.remove('col-md-6')
   $bx2.classList.remove('col-md-6')
 

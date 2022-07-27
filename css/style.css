@@ -20,7 +20,8 @@ a {
 p,
 span,
 textarea,
-label {
+label,
+input {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -32,6 +33,9 @@ p {
 
 textarea {
     resize: none;
+    border: none;
+    outline: none;
+    padding: 8px 5px;
 }
 
 body {
@@ -39,6 +43,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    text-rendering: optimizeSpeed;
     /* color: red; */
 }
 
@@ -57,10 +62,23 @@ button {
     -webkit-appearance: none;
 }
 
-
 textarea.resize {
     overflow: auto;
     resize: vertical;
+}
+
+textarea.noscroll {
+    overflow: hidden;
+}
+
+.borderInput {
+    border: none;
+    border-bottom: 2px solid #0CA886;
+}
+
+.row-md-6>input[type="text"] {
+    padding: 8px 6px;
+    outline: none;
 }
 
 .animate__animated.animate__fasterx3 {
@@ -72,10 +90,6 @@ textarea.resize {
 
 .disable {
     display: none;
-}
-
-textarea.noscroll {
-    overflow: hidden;
 }
 
 .template {
@@ -1330,9 +1344,9 @@ div.noBorderBotton {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: start;
-    -webkit-box-align: center;
+    /* -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
+    align-items: center; */
     height: 100%;
     width: 100%;
 }
@@ -2160,7 +2174,67 @@ div.boxCardSection__alt {
     background-color: #017561;
 }
 
+/**  css input file **/
 
+.container-input {
+    text-align: center;
+    /* background: #282828;
+    border-top: 5px solid #c39f77;
+    padding: 50px 0;
+    border-radius: 6px;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px; */
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile+label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+}
+
+.inputfile+label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+
+.iborrainputfile {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* style 1 */
+
+.inputfile-1+label {
+    color: #fff;
+    background-color: #008069;
+}
+
+.inputfile-1:focus+label,
+.inputfile-1.has-focus+label,
+.inputfile-1+label:hover {
+    background-color: #017561;
+}
 
 @media (min-width: 1024px) {
     .boxWsp {
@@ -2334,12 +2408,13 @@ div.boxCardSection__alt {
 
 .moveall,
 .removeall {
-    border: 1px solid #ccc !important;
+    border: 1px solid #ced4da !important;
+    background: #ffffff;
 }
 
-.moveall,
+.moveall:hover,
 .removeall:hover {
-    background: #efefef;
+    background: #f8f8f8;
 }
 
 .moveall::after {
@@ -2354,4 +2429,8 @@ div.boxCardSection__alt {
 .form-control option {
     padding: 10px;
     border-bottom: 1px solid #efefef;
+}
+
+input.form-control {
+    border: none;
 }

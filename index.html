@@ -186,9 +186,182 @@
                                                             <!-- <hr /> -->
                                                         </div>
                                                     </div>
-                                                    <div class="row" style="margin-bottom: 40px;">
+                                                    <div class="row" style="margin-bottom: 20px;">
                                                         <div class="col">
                                                             <form id="demoform">
+                                                                <select multiple="multiple" size="10"
+                                                                    name="duallistbox_demo1[]"
+                                                                    title="duallistbox_demo1[]">
+                                                                    <option value="payee1">Aviva Insurance - Business -
+                                                                        987654
+                                                                    </option>
+                                                                    <option value="payee2">Bell Mobility - 66853 (John
+                                                                        Smith)
+                                                                    </option>
+                                                                    <option value="payee3">Bell Mobility - 75432 (Jane
+                                                                        Smith)
+                                                                    </option>
+                                                                    <option value="payee4">Bell Mobility - 98765 (Jim
+                                                                        Smith)
+                                                                    </option>
+                                                                    <option value="payee5">Canadian Tire Commercial
+                                                                        Mastercard -
+                                                                        **** 5525</option>
+                                                                    <option value="payee6">Canadian Tire Mastercard -
+                                                                        ****
+                                                                        3158 (President's Card)</option>
+                                                                    <option value="payee7">FedEx Express Canada - 54321
+                                                                    </option>
+                                                                    <option value="payee8">Lowes Canada - 12345</option>
+                                                                    <option value="payee9">Mastercard, PC Financial -
+                                                                        **** 5535
+                                                                    </option>
+                                                                    <option value="payee10">Qtrade Investor - 12345
+                                                                    </option>
+                                                                    <option value="payee11" selected="selected">Servus
+                                                                        Mastercard - **** 5545</option>
+                                                                    <option value="payee12">Telus - 123456787 (Calagary
+                                                                        Office)
+                                                                    </option>
+                                                                    <option value="payee13">Telus - 123456788 (Edmonton
+                                                                        NW
+                                                                        Office)</option>
+                                                                    <option value="payee14">Telus - 123456789 (Edmonton
+                                                                        SE
+                                                                        Office)</option>
+                                                                </select>
+                                                                <br>
+                                                                <div class="col" style="margin: 20px 0px;">
+                                                                    <div class="row-md-6">
+                                                                        <h5>Mensaje</h5>
+                                                                        <p>ingrese un mensaje</p>
+                                                                    </div>
+                                                                    <div class="row-md-6">
+                                                                        <textarea name="" id=""
+                                                                            class="borderInput w-100 resize"
+                                                                            rows="6"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col" style="margin: 20px 0px;">
+                                                                    <div class="row-md-6">
+                                                                        <h5>Imagen</h5>
+                                                                        <p>seleccionar imagen</p>
+                                                                    </div>
+                                                                    <div class="row-md-6 w-100">
+                                                                        <div class="container-input">
+                                                                            <input type="file" name="file-1" id="file-1"
+                                                                                class="inputfile inputfile-1"
+                                                                                data-multiple-caption="{count} archivos seleccionados"
+                                                                                multiple />
+                                                                            <label for="file-1">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                    class="iborrainputfile" width="20"
+                                                                                    height="17" viewBox="0 0 20 17">
+                                                                                    <path
+                                                                                        d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z">
+                                                                                    </path>
+                                                                                </svg>
+                                                                                <span
+                                                                                    class="iborrainputfile">Seleccionar
+                                                                                    archivo</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col" style="margin: 20px 0px;">
+                                                                    <div class="row-md-6">
+                                                                        <h5>Caption</h5>
+                                                                        <p>ingrese caption</p>
+                                                                    </div>
+                                                                    <div class="row-md-6">
+                                                                        <input type="text" name="file"
+                                                                            class="borderInput w-100" id="">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group" style="margin: 20px 14px;">
+                                                                    <h5>Tipo de envio</h5>
+                                                                    <select class="form-control"
+                                                                        id="exampleFormControlSelect1">
+                                                                        <option>solo a los que nunca contactaste
+                                                                        </option>
+                                                                        <option>a los que contactaste pero no te
+                                                                            respondieron
+                                                                        </option>
+                                                                        <option>a los que contactaste y te respondieron
+                                                                        </option>
+                                                                        <option>solo a tus contactos</option>
+                                                                        <option>a todos sin excepcion</option>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div class="col" style="margin:20px 0px;">
+                                                                    <div class="w-100">
+                                                                        <button type="submit"
+                                                                            class="frmSubmit buttonPrimary w-100">Pagar
+                                                                            (#)</button>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxMsgMassiveCRM hide" id="bxMsgMassiveCRM">
+                                <div class="containerBoxSide">
+                                    <div class="boxHeader">
+                                        <div class="boxHeader__items">
+                                            <div class="boxHeader__item widthBackArrow">
+                                                <span class="flex pointer" id="closeMsgMassiveCRM">
+                                                    <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                                        <path fill="currentColor"
+                                                            d="m12 4 1.4 1.4L7.8 11H20v2H7.8l5.6 5.6L12 20l-8-8 8-8z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <div class="boxHeader__item">
+                                                <span>Mensajes Masivos CRM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="boxMain">
+                                        <div class="boxOverflowY">
+                                            <div class="">
+
+                                                <div class="container">
+                                                    <div class="row" style="margin-top: 20px;">
+                                                        <div class="col">
+                                                            <!-- <button class="btn btn-primary float-right">Add payees</button> -->
+
+                                                            <h2 class="h5"> Nuevo Mensaje </h2>
+                                                            <p><strong>Numeros:</strong> Especifica los numeros de
+                                                                telefono al
+                                                                cual se enviara el mensaje</p>
+                                                            <!-- <hr /> -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="margin-bottom: 20px;">
+                                                        <div class="col">
+                                                            <form id="demoform2">
+                                                                <div class="col" style="margin: 20px 0px;">
+                                                                    <div class="row-md-6">
+                                                                        <h5>Tags</h5>
+                                                                        <p>Seleccione los tags a filtrar</p>
+                                                                    </div>
+                                                                    <select class="form-control m-select2"
+                                                                        id="m_select2_6" name="param"
+                                                                        multiple="multiple" style="width: 100%;">
+                                                                    </select>
+                                                                    <button type="submit"
+                                                                        class="frmSubmit buttonPrimary w-100">Filtrar</button>
+                                                                </div>
                                                                 <select multiple="multiple" size="10"
                                                                     name="duallistbox_demo1[]"
                                                                     title="duallistbox_demo1[]">
@@ -231,39 +404,56 @@
                                                                         Office)</option>
                                                                 </select>
                                                                 <br>
-                                                                <div class="col" style="margin: 30px 0px;">
+                                                                <div class="col" style="margin: 20px 0px;">
                                                                     <div class="row-md-6">
-                                                                        <h5>mensaje</h5>
+                                                                        <h5>Mensaje</h5>
                                                                         <p>ingrese un mensaje</p>
                                                                     </div>
                                                                     <div class="row-md-6">
-                                                                        <textarea name="" id="" class="w-100 resize"
+                                                                        <textarea name="" id=""
+                                                                            class="borderInput w-100 resize"
                                                                             rows="6"></textarea>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col" style="margin: 30px 0px;">
+                                                                <div class="col" style="margin: 20px 0px;">
                                                                     <div class="row-md-6">
-                                                                        <h5>imagen</h5>
+                                                                        <h5>Imagen</h5>
                                                                         <p>seleccionar imagen</p>
                                                                     </div>
                                                                     <div class="row-md-6">
-                                                                        <input type="file" name="file" class="w-100"
-                                                                            multiple id="">
+                                                                        <div class="container-input">
+                                                                            <input type="file" name="file-1" id="file-1"
+                                                                                class="inputfile inputfile-1"
+                                                                                data-multiple-caption="{count} archivos seleccionados"
+                                                                                multiple />
+                                                                            <label for="file-1">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                    class="iborrainputfile" width="20"
+                                                                                    height="17" viewBox="0 0 20 17">
+                                                                                    <path
+                                                                                        d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z">
+                                                                                    </path>
+                                                                                </svg>
+                                                                                <span
+                                                                                    class="iborrainputfile">Seleccionar
+                                                                                    archivo</span>
+                                                                            </label>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col" style="margin: 30px 0px;">
+                                                                <div class="col" style="margin: 20px 0px;">
                                                                     <div class="row-md-6">
-                                                                        <h5>caption</h5>
+                                                                        <h5>Caption</h5>
                                                                         <p>ingrese caption</p>
                                                                     </div>
                                                                     <div class="row-md-6">
-                                                                        <input type="text" name="file" class="w-100"
-                                                                            id="">
+                                                                        <input type="text" name="file"
+                                                                            class="borderInput w-100" id="">
                                                                     </div>
                                                                 </div>
 
-                                                                <div class="form-group" style="margin: 30px 14px;">
-                                                                    <h5>tipo de envio</h5>
+                                                                <div class="form-group" style="margin: 20px 14px;">
+                                                                    <h5>Tipo de envio</h5>
                                                                     <select class="form-control"
                                                                         id="exampleFormControlSelect1">
                                                                         <option>solo a los que nunca contactaste
@@ -278,10 +468,10 @@
                                                                     </select>
                                                                 </div>
 
-                                                                <div class="col" style="margin: 30px 0px;">
+                                                                <div class="col" style="margin: 20px 0px;">
                                                                     <div class="w-100">
                                                                         <button type="submit"
-                                                                            class="btn btn-primary w-100">Pagar
+                                                                            class="frmSubmit buttonPrimary w-100">Pagar
                                                                             (#)</button>
                                                                     </div>
                                                                 </div>
@@ -293,28 +483,6 @@
 
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="boxMsgMassiveCRM hide" id="bxMsgMassiveCRM">
-                                <div class="containerBoxSide">
-                                    <div class="boxHeader">
-                                        <div class="boxHeader__items">
-                                            <div class="boxHeader__item widthBackArrow">
-                                                <span class="flex pointer" id="closeMsgMassiveCRM">
-                                                    <svg viewBox="0 0 24 24" width="24" height="24" class="">
-                                                        <path fill="currentColor"
-                                                            d="m12 4 1.4 1.4L7.8 11H20v2H7.8l5.6 5.6L12 20l-8-8 8-8z">
-                                                        </path>
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div class="boxHeader__item">
-                                                <span>Mensajes Masivos CRM</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="boxMain">
                                     </div>
                                 </div>
                             </div>
@@ -337,6 +505,7 @@
                                         </div>
                                     </div>
                                     <div class="boxMain">
+
                                     </div>
                                 </div>
                             </div>
@@ -359,6 +528,30 @@
                                         </div>
                                     </div>
                                     <div class="boxMain">
+                                        <div class="col" style="margin: 20px 0px;">
+                                            <div class="row-md-6">
+                                                <h5>Importar contactos</h5>
+                                                <p>seleccione el archivo .csv</p>
+                                            </div>
+                                            <div class="row-md-6">
+                                                <div class="container-input">
+                                                    <input type="file" name="file-1" id="file-1"
+                                                        class="inputfile inputfile-1"
+                                                        data-multiple-caption="{count} archivos seleccionados"
+                                                        multiple />
+                                                    <label for="file-1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile"
+                                                            width="20" height="17" viewBox="0 0 20 17">
+                                                            <path
+                                                                d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z">
+                                                            </path>
+                                                        </svg>
+                                                        <span class="iborrainputfile">Seleccionar
+                                                            archivo</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -406,7 +599,6 @@
                                     </div>
                                 </div>
                             </div>
-
 
                             <div class="boxContacts hide" id="bxContacts">
                                 <div class="containerBoxSide">
@@ -549,7 +741,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         <div>
 
@@ -1791,6 +1982,27 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="BIDrawerMessageAuto hide" id="contMsgAuto">
+                            <div class="panelHeader headerMsgAuto">
+                                <div class="iconInfo pointer" id="closeMsgAuto">
+                                    <div class="centerIcon">
+                                        <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24" class="">
+                                            <path
+                                                d="m19.1 17.2-5.3-5.3 5.3-5.3-1.8-1.8-5.3 5.4-5.3-5.3-1.8 1.7 5.3 5.3-5.3 5.3L6.7 19l5.3-5.3 5.3 5.3 1.8-1.8z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="titleInfo">
+                                    <div class="centerTextI">
+                                        <p>Info. del <span id="tipoInfoChat">Grupo</span> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="BIforms">
+
+                            </div>
+                        </div>
 
                     </div>
 
@@ -1989,13 +2201,6 @@
 
     <script src="js/script-front.js"></script>
     <script src="js/script.js"></script>
-
-    <!-- <script>
-        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
-            ':35729/livereload.js?snipver=1"></' + 'script>')
-    </script> -->
-
-
 
 </body>
 
