@@ -71,9 +71,32 @@ textarea.noscroll {
     overflow: hidden;
 }
 
+textarea[name="message"] {
+    padding: 0;
+}
+
+table,
+tr,
+td {
+    line-height: 1.8;
+}
+
+tr.odd {
+    outline: 1px solid #c2c2c2;
+}
+
+tr.odd:hover,
+tr.even:hover {
+    background-color: #f3f3f3;
+}
+
+input.borderInput,
 .borderInput {
+    border-radius: 0;
     border: none;
+    border: 1px solid #c2c2c2;
     border-bottom: 2px solid #0CA886;
+    margin-bottom: -2px;
 }
 
 .row-md-6>input[type="text"] {
@@ -94,6 +117,18 @@ textarea.noscroll {
 
 .template {
     display: none;
+}
+
+.pVertical {
+    padding: 15px 0px;
+}
+
+.centerFlex {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
 }
 
 ::-webkit-scrollbar {
@@ -168,10 +203,12 @@ textarea.noscroll {
     overflow: hidden;
 }
 
+#bxListC .hide,
 #Wsp .hide {
     display: none;
 }
 
+#bxListC .show,
 #Wsp .show {
     display: flex;
 }
@@ -2419,7 +2456,6 @@ div.boxCardSection__alt {
 
 .moveall::after {
     content: attr(title);
-
 }
 
 .removeall::after {
@@ -2431,6 +2467,6 @@ div.boxCardSection__alt {
     border-bottom: 1px solid #efefef;
 }
 
-input.form-control {
+/* input.form-control {
     border: none;
-}
+} */

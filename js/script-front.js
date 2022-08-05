@@ -44,9 +44,44 @@ $bxSettings = document.getElementById('bxSettings')
 $openSettings = document.getElementById('openSettings')
 $closeSettings = document.getElementById('closeSettings')
 
+$contNewAnswer = document.getElementById('contNewAnswer')
+$openNewAnswer = document.getElementById('openNewAnswer')
+$closeNewAnswer = document.getElementById('closeNewAnswer')
+
+
+$openNewAnswer.addEventListener("click", handleOpenNewAnswers);
+function handleOpenNewAnswers() {
+    /*info*/
+    $bxChat.classList.add("wsp");
+    $contInfo.classList.add("hide");
+    $bxInfo.classList.add("hide");
+    /*agregar contacto*/
+    $bxChat.classList.add("wsp");
+    $contMsgAuto.classList.add("hide");
+    $bxInfo.classList.add("hide");
+    /*abrir nueva respuesta*/
+    $bxChat.classList.remove("wsp");
+    $contNewAnswer.classList.remove("hide")
+    $bxInfo.classList.remove("hide");
+}
+$closeNewAnswer.addEventListener("click", handleCloseNewAnswers);
+function handleCloseNewAnswers() {
+    $bxChat.classList.add("wsp");
+    $contNewAnswer.classList.add("hide")
+    $bxInfo.classList.add("hide");
+}
 
 $showmsg.addEventListener("click", handleShowMsg);
 function handleShowMsg() {
+    /*info*/
+    $bxChat.classList.add("wsp");
+    $contInfo.classList.add("hide");
+    $bxInfo.classList.add("hide");
+    /*nueva respuesta*/
+    $bxChat.classList.add("wsp");
+    $contNewAnswer.classList.add("hide")
+    $bxInfo.classList.add("hide");
+    /*agregar contacto*/
     $bxChat.classList.remove("wsp");
     $contMsgAuto.classList.remove("hide")
     $bxInfo.classList.remove("hide");
@@ -59,6 +94,15 @@ function handleCloseMsg() {
 }
 $top_bar.addEventListener("click", handleOpenInfo);
 function handleOpenInfo() {
+    /*agregar contacto*/
+    $bxChat.classList.add("wsp");
+    $contMsgAuto.classList.add("hide");
+    $bxInfo.classList.add("hide");
+    /*nueva respuesta*/
+    $bxChat.classList.add("wsp");
+    $contNewAnswer.classList.add("hide")
+    $bxInfo.classList.add("hide");
+    /*info*/
     $bxChat.classList.remove("wsp");
     $contInfo.classList.remove("hide");
     $bxInfo.classList.remove("hide");
@@ -83,6 +127,16 @@ function handleCloseNewChats() {
     setTimeout(function () {
         $bxContacts.classList.add("hide");
     }, 500);
+    /*info*/
+    $bxChat.classList.add("wsp");
+    $contInfo.classList.add("hide");
+    $bxInfo.classList.add("hide");
+
+    /*nueva respuesta*/
+    $bxChat.classList.add("wsp");
+    $contNewAnswer.classList.add("hide")
+    $bxInfo.classList.add("hide");
+    /*abrir agregar contacto*/
     $bxChat.classList.add("wsp");
     $contMsgAuto.classList.add("hide");
     $bxInfo.classList.add("hide");
@@ -177,6 +231,9 @@ function handleCloseAnswers() {
     setTimeout(function () {
         $bxAnswer.classList.add("hide");
     }, 500);
+    $bxChat.classList.add("wsp");
+    $contMsgAuto.classList.add("hide");
+    $bxInfo.classList.add("hide");
 }
 
 $openSettings.addEventListener("click", handleOpenSettings);

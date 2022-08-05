@@ -6,16 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhatsApp Web Clone</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="./icon.png" />
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/transition-style/transition.hackpack.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-duallistbox.css">
-    <script src="js/jquery.bootstrap-duallistbox.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-duallistbox.css">
+    <script src="./js/jquery.bootstrap-duallistbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="./DataTables/datatables.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
@@ -382,7 +384,7 @@
                                                                         **** 5525</option>
                                                                     <option value="payee6">Canadian Tire Mastercard -
                                                                         ****
-                                                                        3158 (President's Card)</option>
+                                                                        3158 (President's Card)</option>
                                                                     <option value="payee7">FedEx Express Canada - 54321
                                                                     </option>
                                                                     <option value="payee8">Lowes Canada - 12345</option>
@@ -569,11 +571,39 @@
                                                 </span>
                                             </div>
                                             <div class="boxHeader__item">
-                                                <span>Respuestas</span>
+                                                <span>Respuestas Automaticas</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="boxMain">
+                                        <div class="boxOverflowY">
+                                            <div class="centerFlex pVertical">
+                                                <table id="example" class="display" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Respuesta</th>
+                                                            <th>Parametro</th>
+                                                            <th>Activo</th>
+                                                            <th>Acciones</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th>Respuesta</th>
+                                                            <th>Parametro</th>
+                                                            <th>Activo</th>
+                                                            <th>Acciones</th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                                <div class="centerFlex w-50">
+                                                    <button class="frmSubmit buttonPrimary" type="button"
+                                                        id="openNewAnswer">
+                                                        + Nueva Respuesta
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -741,9 +771,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-
                         </div>
                         <header class="panelHeader">
                             <div class="ContentUser">
@@ -1636,7 +1663,7 @@
                         </div>
                     </div>
 
-                    <div class="boxInfo animate__animated animate__fasterx3 animate__fadeInRight hide " id="bxInfo">
+                    <div class="boxInfo animate__animated animate__fasterx3 animate__fadeInRight hide" id="bxInfo">
                         <div class="BIDrawerInfo hide" id="contInfo">
                             <div class="panelHeader headerInfo" style="z-index: 100;">
                                 <div class="iconInfo pointer" id="closeInfo">
@@ -1950,7 +1977,7 @@
                                 </div>
                                 <div class="titleInfo">
                                     <div class="centerTextI">
-                                        <p>Info. del <span id="tipoInfoChat">Grupo</span> </p>
+                                        <p>Agregar Contacto</p>
                                     </div>
                                 </div>
                             </div>
@@ -1982,9 +2009,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="BIDrawerMessageAuto hide" id="contMsgAuto">
+                        <div class="BIDrawerMessageAuto hide" id="contNewAnswer">
                             <div class="panelHeader headerMsgAuto">
-                                <div class="iconInfo pointer" id="closeMsgAuto">
+                                <div class="iconInfo pointer" id="closeNewAnswer">
                                     <div class="centerIcon">
                                         <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24" class="">
                                             <path
@@ -1995,12 +2022,25 @@
                                 </div>
                                 <div class="titleInfo">
                                     <div class="centerTextI">
-                                        <p>Info. del <span id="tipoInfoChat">Grupo</span> </p>
+                                        <p>Crear Respuesta Automatica</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="BIforms">
+                                <div class="formCont">
+                                    <form class="formRegister" action="" method="">
+                                        <label for="POST-parametro" class="frmLabel">Parametro:</label>
+                                        <input id="POST-parametro" placeholder="Parametro:" class="frmInput" type="text"
+                                            autocomplete="off" name="parametro">
+                                        <label for="POST-messageNA" class="frmLabel">Respuesta:</label>
+                                        <textarea id="POST-messageNA" name="messageNA" class="borderInput w-100 resize"
+                                            placeholder="Respuesta:" rows="6" spellcheck="false"
+                                            data-gramm="false"></textarea>
 
+                                        <input class="frmSubmit buttonSecundary" type="submit" value="Cancelar">
+                                        <input class="frmSubmit buttonPrimary" type="submit" value="Registrar">
+                                    </form>
+                                </div>
                             </div>
                         </div>
 
@@ -2199,8 +2239,19 @@
         </div>
     </div>
 
-    <script src="js/script-front.js"></script>
-    <script src="js/script.js"></script>
+    <script type="text/javascript" src="./DataTables/datatables.js"></script>
+    <script src="./js/script-front.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable({
+                ajax: './arrays.txt',
+                scrollY: '50vh',
+                scrollCollapse: true,
+                paging: false,
+            });
+        });
+    </script>
 
 </body>
 
