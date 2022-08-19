@@ -1647,24 +1647,6 @@ input[type=submit].btn-block {
     color: #fff !important
 }
 
-.text-primary {
-    color: #007bff !important
-}
-
-a.text-primary:focus,
-a.text-primary:hover {
-    color: #0062cc !important
-}
-
-.text-secondary {
-    color: #6c757d !important
-}
-
-a.text-secondary:focus,
-a.text-secondary:hover {
-    color: #545b62 !important
-}
-
 .text-success {
     color: #28a745 !important
 }

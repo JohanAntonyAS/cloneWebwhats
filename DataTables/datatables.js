@@ -9386,7 +9386,8 @@
 							$(_div, { 'class': classes.sScrollHeadInner })
 								.css({
 									'box-sizing': 'content-box',
-									width: scroll.sXInner || '100%',
+									// width: scroll.sXInner || '100%',
+									width: '100%',
 									'border-bottom': '2px solid #0CA886',
 								})
 								.append(
@@ -13284,12 +13285,12 @@
 * @param {string} direction Direction of the sort to be applied (`asc` or `desc`)
 * @returns {DataTables.Api} this
 *//**
-																																									* Set the ordering for the table.
-																																									*
-																																									* @param {array} order 1D array of sorting information to be applied.
-																																									* @param {array} [...] Optional additional sorting conditions
-																																									* @returns {DataTables.Api} this
-																																									*//**
+																																											* Set the ordering for the table.
+																																											*
+																																											* @param {array} order 1D array of sorting information to be applied.
+																																											* @param {array} [...] Optional additional sorting conditions
+																																											* @returns {DataTables.Api} this
+																																											*//**
 * Set the ordering for the table.
 *
 * @param {array} order 2D array of sorting information to be applied.

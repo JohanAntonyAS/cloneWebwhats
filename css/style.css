@@ -47,6 +47,18 @@ body {
     /* color: red; */
 }
 
+.MCboxInnerMsg video {
+    width: 400px;
+    height: auto;
+}
+
+video::-webkit-media-controls-fullscreen-button,
+video::-webkit-media-controls-enclosure,
+video::-internal-media-controls-download-button,
+video::-webkit-media-controls-panel {
+    display: none;
+}
+
 img {
     user-drag: none;
     -webkit-user-drag: none;
@@ -54,6 +66,23 @@ img {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+.containerImg {
+    width: 350px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerImg img {
+    width: 100%;
+    height: auto;
+}
+
+.containerImg~.MCmsjText {
+    padding-top: 8px;
 }
 
 button {
@@ -124,11 +153,43 @@ input.borderInput,
 }
 
 .centerFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+}
+
+.centerFlexRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.frmSubmit.noMargin {
+    margin: 0;
+}
+
+
+.centerFlexRow .select2-container .select2-selection--multiple {
+    padding: 8px 0;
+
 }
 
 ::-webkit-scrollbar {
@@ -210,6 +271,8 @@ input.borderInput,
 
 #bxListC .show,
 #Wsp .show {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -225,7 +288,12 @@ input.borderInput,
 
 .BIDrawerMessageAuto,
 .BIDrawerInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     height: 100%;
     overflow: hidden;
@@ -258,6 +326,8 @@ input.borderInput,
     height: 100%;
     width: 100%;
     z-index: 100;
+    -webkit-transition: left .5s;
+    -o-transition: left .5s;
     transition: left .5s;
     will-change: transform;
 }
@@ -315,6 +385,8 @@ input.borderInput,
 }
 
 .boxHeader__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     color: #fff;
     font-weight: 600;
@@ -330,7 +402,12 @@ input.borderInput,
 
 .boxMain {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
     height: 100%;
@@ -439,6 +516,8 @@ input.borderInput,
 }
 
 .toggleMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -453,6 +532,9 @@ input.borderInput,
 .menuDrop {
     position: absolute;
     display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     min-width: 200px;
     top: 45px;
@@ -571,6 +653,8 @@ input.borderInput,
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: capitalize;
     font-size: 16px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: #008069;
     padding: 30px 0 15px 32px;
@@ -626,8 +710,14 @@ input.borderInput,
 
 .iconGreen span {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -1380,7 +1470,7 @@ div.noBorderBotton {
     display: flex;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    justify-content: start;
+    justify-content: flex-start;
     /* -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; */
@@ -1425,6 +1515,7 @@ div.noBorderBotton {
 }
 
 div.shadowBox__alt {
+    -webkit-box-shadow: 0 1px 3px rgba(11, 20, 26, 0.08);
     box-shadow: 0 1px 3px rgba(11, 20, 26, 0.08);
 }
 
@@ -1624,6 +1715,8 @@ div.boxCardSection__alt {
 
 .ISPNicon {
     color: #86969F;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -2211,6 +2304,17 @@ div.boxCardSection__alt {
     background-color: #017561;
 }
 
+.textPrimary {
+    color: #1b1b1b;
+    font-size: 1rem;
+}
+
+.textSecundary {
+    color: #86969f;
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
 /**  css input file **/
 
 .container-input {
@@ -2237,6 +2341,7 @@ div.boxCardSection__alt {
     max-width: 80%;
     font-size: 1.25rem;
     font-weight: 700;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     white-space: nowrap;
     cursor: pointer;
@@ -2438,8 +2543,8 @@ div.boxCardSection__alt {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
     background: -o-linear-gradient(top, white, black);
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
     background: linear-gradient(to bottom, white, black);
 }
 

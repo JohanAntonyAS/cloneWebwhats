@@ -236,6 +236,41 @@ var Select2 = function () {
             text: 'Wontfix'
         }];
 
+        var data2 = [{
+            id: 0,
+            text: 'grupo 1'
+        }, {
+            id: 1,
+            text: 'grupo 2'
+        }, {
+            id: 2,
+            text: 'grupo 3'
+        }, {
+            id: 3,
+            text: 'grupo 4'
+        }, {
+            id: 4,
+            text: 'grupo 5'
+        }, {
+            id: 5,
+            text: 'grupo 4'
+        }, {
+            id: 6,
+            text: 'grupo 4'
+        }, {
+            id: 7,
+            text: 'grupo 4'
+        }, {
+            id: 8,
+            text: 'grupo 4'
+        }, {
+            id: 9,
+            text: 'grupo 4'
+        }, {
+            id: 10,
+            text: 'grupo 4'
+        },];
+
         $('#m_select2_5').select2({
             placeholder: "Seleciona algo",
             data: data
@@ -243,6 +278,14 @@ var Select2 = function () {
         $('#m_select2_6').select2({
             placeholder: "Seleciona algo",
             data: data
+        });
+        $('#m_select2_7').select2({
+            placeholder: "Seleciona algo",
+            data: data2
+        });
+        $('#m_select2_8').select2({
+            placeholder: "Seleciona algo",
+            data: data2
         });
 
     }
@@ -263,8 +306,6 @@ jQuery(document).ready(function () {
 
 //dualSelectBox
 var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox({
-    // nonSelectedListLabel: 'Available Payees',
-    // selectedListLabel: 'Selected Payees',
     preserveSelectionOnMove: 'moved',
     moveAllLabel: 'Mover todos',
     removeAllLabel: 'Remover todos',
